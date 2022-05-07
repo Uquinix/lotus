@@ -1485,7 +1485,7 @@ QemuCocoaView *cocoaView;
     /* Make the picture of QEMU */
     NSImageView *picture_view = [[NSImageView alloc] initWithFrame:
                                                      picture_rect];
-    char *qemu_image_path_c = get_relocated_path(CONFIG_QEMU_ICONDIR "/hicolor/512x512/apps/qemu.png");
+    char *qemu_image_path_c = get_relocated_path(CONFIG_LOTUS_ICONDIR "/hicolor/512x512/apps/qemu.png");
     NSString *qemu_image_path = [NSString stringWithUTF8String:qemu_image_path_c];
     g_free(qemu_image_path_c);
     NSImage *qemu_image = [[NSImage alloc] initWithContentsOfFile:qemu_image_path];

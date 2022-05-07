@@ -38,7 +38,7 @@ qemu_docdir = get_option('docdir') / get_option('qemu_suffix')
 qemu_moddir = get_option('libdir') / get_option('qemu_suffix')
 
 qemu_desktopdir = get_option('datadir') / 'applications'
-qemu_icondir = get_option('datadir') / 'icons'
+lotus_icondir = get_option('datadir') / 'icons'
 
 config_host_data = configuration_data()
 genh = []
@@ -1454,7 +1454,7 @@ config_host_data.set_quoted('CONFIG_QEMU_DATADIR', get_option('prefix') / qemu_d
 config_host_data.set_quoted('CONFIG_QEMU_DESKTOPDIR', get_option('prefix') / qemu_desktopdir)
 config_host_data.set_quoted('CONFIG_QEMU_FIRMWAREPATH', get_option('qemu_firmwarepath'))
 config_host_data.set_quoted('CONFIG_QEMU_HELPERDIR', get_option('prefix') / get_option('libexecdir'))
-config_host_data.set_quoted('CONFIG_QEMU_ICONDIR', get_option('prefix') / qemu_icondir)
+config_host_data.set_quoted('CONFIG_LOTUS_ICONDIR', get_option('prefix') / lotus_icondir)
 config_host_data.set_quoted('CONFIG_QEMU_LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_host_data.set_quoted('CONFIG_QEMU_LOCALSTATEDIR', get_option('prefix') / get_option('localstatedir'))
 config_host_data.set_quoted('CONFIG_QEMU_MODDIR', get_option('prefix') / qemu_moddir)
