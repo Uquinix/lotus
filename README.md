@@ -12,7 +12,7 @@ With Lotus, features like dumping stackframes at an address, and dumping only er
 
 ## Building
 
-For further information, visit [building](https://wiki.qemu.org/Hosts/Linux)
+For further information, visit [building](https://github.com/Uquinix/lotus-docs/blob/main/building.md)
 
 To setup:
 
