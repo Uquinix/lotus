@@ -67,3 +67,6 @@
 [submodule "tests/lcitool/libvirt-ci"]
 	path = tests/lcitool/libvirt-ci
 	url = http://gitlab.com/libvirt/libvirt-ci
+[submodule "lotus-docs"]
+	path = lotus-docs
+	url = https://github.com/Uquinix/lotus-docs

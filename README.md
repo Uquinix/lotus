@@ -1,5 +1,7 @@
 # <p align="center">Lotus</p>
 
+<img align="right" width="400" height="400" src="https://github.com/Uquinix/lotus-docs/blob/main/images/logo.png">
+
 Based on the guts of QEMU, Lotus features advanced debugging options for a highly advanced workflow.
 
 ## What's changed?
