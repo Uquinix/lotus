@@ -236,11 +236,11 @@ class PlatformBuilder(UefiBuilder, BuildSettingsManager):
 
         # Unique Command and Args parameters per ARCH
         if (self.env.GetValue("TARGET_ARCH").upper() == "AARCH64"):
-            cmd = "qemu-system-aarch64"
+            cmd = "lotus-system-aarch64"
             args = "-M virt"
             args += " -cpu cortex-a57"                                          # emulate cpu
         elif(self.env.GetValue("TARGET_ARCH").upper() == "ARM"):
-            cmd = "qemu-system-arm"
+            cmd = "lotus-system-arm"
             args = "-M virt"
             args += " -cpu cortex-a15"                                          # emulate cpu
         else:

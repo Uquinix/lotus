@@ -52,14 +52,14 @@ echo
 
 # Download and compile linaro version qemu which has support for n900 machine
 # Last working commit is 8f8d8e0796efe1a6f34cdd83fb798f3c41217ec1
-if ! test -f qemu-system-arm; then
+if ! test -f lotus-system-arm; then
 	test -d qemu-linaro || git clone https://git.linaro.org/qemu/qemu-linaro.git
 	cd qemu-linaro
 	git checkout 8f8d8e0796efe1a6f34cdd83fb798f3c41217ec1
 	./configure --enable-system --target-list=arm-softmmu --disable-sdl --disable-gtk --disable-curses --audio-drv-list= --audio-card-list= --disable-werror --disable-xen --disable-xen-pci-passthrough --disable-brlapi --disable-vnc --disable-curl --disable-slirp --disable-kvm --disable-user --disable-linux-user --disable-bsd-user --disable-guest-base --disable-uuid --disable-vde --disable-linux-aio --disable-cap-ng --disable-attr --disable-blobs --disable-docs --disable-spice --disable-libiscsi --disable-smartcard-nss --disable-usb-redir --disable-guest-agent --disable-seccomp --disable-glusterfs --disable-nptl --disable-fdt
 	make -j4
 	cd ..
-	ln -s qemu-linaro/arm-softmmu/qemu-system-arm .
+	ln -s qemu-linaro/arm-softmmu/lotus-system-arm .
 fi
 
 echo
@@ -228,7 +228,7 @@ echo
 
 # Run MTD image in qemu and wait for 300s if U-Boot prints testing string to serial console and poweroff
 rm -f qemu_uboot.log
-./qemu-system-arm -M n900 -mtdblock mtd_uboot.img -sd emmc_uboot.img -serial /dev/stdout -display none > qemu_uboot.log &
+./lotus-system-arm -M n900 -mtdblock mtd_uboot.img -sd emmc_uboot.img -serial /dev/stdout -display none > qemu_uboot.log &
 qemu_pid=$!
 tail -F qemu_uboot.log &
 tail_pid=$!
@@ -240,7 +240,7 @@ wait || true
 
 # Run MTD image in qemu and wait for 300s if kernel from RAM is correctly booted
 rm -f qemu_ram.log
-./qemu-system-arm -M n900 -mtdblock mtd_ram.img -serial /dev/stdout -display none > qemu_ram.log &
+./lotus-system-arm -M n900 -mtdblock mtd_ram.img -serial /dev/stdout -display none > qemu_ram.log &
 qemu_pid=$!
 tail -F qemu_ram.log &
 tail_pid=$!
@@ -252,7 +252,7 @@ wait || true
 
 # Run MTD image in qemu and wait for 300s if kernel from eMMC is correctly booted
 rm -f qemu_emmc.log
-./qemu-system-arm -M n900 -mtdblock mtd_emmc.img -sd emmc_emmc.img -serial /dev/stdout -display none > qemu_emmc.log &
+./lotus-system-arm -M n900 -mtdblock mtd_emmc.img -sd emmc_emmc.img -serial /dev/stdout -display none > qemu_emmc.log &
 qemu_pid=$!
 tail -F qemu_emmc.log &
 tail_pid=$!
@@ -264,7 +264,7 @@ wait || true
 
 # Run MTD image in qemu and wait for 300s if kernel from OneNAND is correctly booted
 rm -f qemu_nand.log
-./qemu-system-arm -M n900 -mtdblock mtd_nand.img -sd emmc_nand.img -serial /dev/stdout -display none > qemu_nand.log &
+./lotus-system-arm -M n900 -mtdblock mtd_nand.img -sd emmc_nand.img -serial /dev/stdout -display none > qemu_nand.log &
 qemu_pid=$!
 tail -F qemu_nand.log &
 tail_pid=$!

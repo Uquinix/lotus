@@ -25,7 +25,7 @@ Build for 32 bit, big endian:
   make malta_defconfig
   make
   UBOOT_BIN=u-boot.bin
-  QEMU_BIN=qemu-system-mips
+  QEMU_BIN=lotus-system-mips
   QEMU_CPU=24Kc
 
 Build for 32 bit, little endian:
@@ -35,7 +35,7 @@ Build for 32 bit, little endian:
   make maltael_defconfig
   make
   UBOOT_BIN=u-boot-swap.bin
-  QEMU_BIN=qemu-system-mipsel
+  QEMU_BIN=lotus-system-mipsel
   QEMU_CPU=24Kc
 
 Build for 64 bit, big endian:
@@ -45,7 +45,7 @@ Build for 64 bit, big endian:
   make malta64_defconfig
   make
   UBOOT_BIN=u-boot.bin
-  QEMU_BIN=qemu-system-mips64
+  QEMU_BIN=lotus-system-mips64
   QEMU_CPU=MIPS64R2-generic
 
 Build for 64 bit, little endian:
@@ -55,7 +55,7 @@ Build for 64 bit, little endian:
   make malta64el_defconfig
   make
   UBOOT_BIN=u-boot-swap.bin
-  QEMU_BIN=qemu-system-mips64el
+  QEMU_BIN=lotus-system-mips64el
   QEMU_CPU=MIPS64R2-generic
 
 Generate NOR flash image with U-Boot binary:

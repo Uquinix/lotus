@@ -2921,7 +2921,7 @@ foreach target : target_dirs
     target_inc += include_directories('linux-headers', is_system: true)
   endif
   if target.endswith('-softmmu')
-    qemu_target_name = 'qemu-system-' + target_name
+    qemu_target_name = 'lotus-system-' + target_name
     target_type='system'
     t = target_softmmu_arch[target_base_arch].apply(config_target, strict: false)
     arch_srcs += t.sources()
@@ -3001,14 +3001,14 @@ foreach target : target_dirs
 
   if target.endswith('-softmmu')
     execs = [{
-      'name': 'qemu-system-' + target_name,
+      'name': 'lotus-system-' + target_name,
       'win_subsystem': 'console',
       'sources': files('softmmu/main.c'),
       'dependencies': []
     }]
     if targetos == 'windows' and (sdl.found() or gtk.found())
       execs += [{
-        'name': 'qemu-system-' + target_name + 'w',
+        'name': 'lotus-system-' + target_name + 'w',
         'win_subsystem': 'windows',
         'sources': files('softmmu/main.c'),
         'dependencies': []

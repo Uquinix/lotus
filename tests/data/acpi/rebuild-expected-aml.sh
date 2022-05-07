@@ -24,7 +24,7 @@ if grep TARGET_DIRS= config-host.mak; then
     for arch in $qemu_arches; do
         if  grep TARGET_DIRS= config-host.mak | grep "$arch"-softmmu;
         then
-            qemu_bins="$qemu_bins ./qemu-system-$arch"
+            qemu_bins="$qemu_bins ./lotus-system-$arch"
         fi
     done
 else

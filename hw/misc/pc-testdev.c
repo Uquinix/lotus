@@ -27,7 +27,7 @@
  * as emulation, power management, interrupt routing, among others. It's meant
  * to be used like:
  *
- * qemu-system-x86_64 -device pc-testdev -serial stdio \
+ * lotus-system-x86_64 -device pc-testdev -serial stdio \
  * -device isa-debug-exit,iobase=0xf4,iosize=0x4 \
  * -kernel /home/lmr/Code/virt-test.git/kvm/unittests/msr.flat
  *

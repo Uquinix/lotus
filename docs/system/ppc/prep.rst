@@ -1,7 +1,7 @@
 Prep machine (``40p``)
 ==================================================================
 
-Use the executable ``qemu-system-ppc`` to simulate a complete 40P (PREP)
+Use the executable ``lotus-system-ppc`` to simulate a complete 40P (PREP)
 
 Supported devices
 -----------------

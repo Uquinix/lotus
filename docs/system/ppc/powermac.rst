@@ -1,7 +1,7 @@
 PowerMac family boards (``g3beige``, ``mac99``)
 ==================================================================
 
-Use the executable ``qemu-system-ppc`` to simulate a complete PowerMac
+Use the executable ``lotus-system-ppc`` to simulate a complete PowerMac
 PowerPC system.
 
 - ``g3beige``              Heathrow based PowerMAC

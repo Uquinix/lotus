@@ -215,7 +215,7 @@ class PlatformBuilder( UefiBuilder, BuildSettingsManager):
         #
         # QEMU must be on the path
         #
-        cmd = "qemu-system-x86_64"
+        cmd = "lotus-system-x86_64"
         args  = "-debugcon stdio"                                           # write messages to stdio
         args += " -global isa-debugcon.iobase=0x402"                        # debug messages out thru virtual io port
         args += " -net none"                                                # turn off network

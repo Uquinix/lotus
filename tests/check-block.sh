@@ -40,7 +40,7 @@ if echo ${SANITIZE_FLAGS} | grep -q "\-fsanitize" 2>/dev/null; then
     skip "Sanitizers are enabled ==> Not running the qemu-iotests."
 fi
 
-if [ -z "$(find . -name 'qemu-system-*' -print)" ]; then
+if [ -z "$(find . -name 'lotus-system-*' -print)" ]; then
     skip "No qemu-system binary available ==> Not running the qemu-iotests."
 fi
 

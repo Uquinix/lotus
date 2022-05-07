@@ -3,7 +3,7 @@
 Sparc64 System emulator
 -----------------------
 
-Use the executable ``qemu-system-sparc64`` to simulate a Sun4u
+Use the executable ``lotus-system-sparc64`` to simulate a Sun4u
 (UltraSPARC PC-like machine), Sun4v (T1 PC-like machine), or generic
 Niagara (T1) machine. The Sun4u emulator is mostly complete, being able
 to run Linux, NetBSD and OpenBSD in headless (-nographic) mode. The
@@ -16,7 +16,7 @@ and is able to boot the disk.s10hw2 Solaris image.
 
 ::
 
-   qemu-system-sparc64 -M niagara -L /path-to/S10image/ \
+   lotus-system-sparc64 -M niagara -L /path-to/S10image/ \
                        -nographic -m 256 \
                        -drive if=pflash,readonly=on,file=/S10image/disk.s10hw2
 

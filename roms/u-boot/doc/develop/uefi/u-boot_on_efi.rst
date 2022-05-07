@@ -77,7 +77,7 @@ something like this::
 
    mkdir /tmp/efi
    cp /path/to/u-boot*.efi /tmp/efi
-   qemu-system-x86_64 -bios bios.bin -hda fat:/tmp/efi/
+   lotus-system-x86_64 -bios bios.bin -hda fat:/tmp/efi/
 
 Add -nographic if you want to use the terminal for output. Once it starts
 type 'fs0:u-boot-payload.efi' to run the payload or 'fs0:u-boot-app.efi' to

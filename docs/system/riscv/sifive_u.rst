@@ -126,7 +126,7 @@ To boot the newly built Linux kernel in QEMU with the ``sifive_u`` machine:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M sifive_u -smp 5 -m 2G \
+  $ lotus-system-riscv64 -M sifive_u -smp 5 -m 2G \
       -display none -serial stdio \
       -kernel arch/riscv/boot/Image \
       -initrd /path/to/rootfs.ext4 \
@@ -151,7 +151,7 @@ with the following command line options:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M sifive_u -smp 5 -m 8G \
+  $ lotus-system-riscv64 -M sifive_u -smp 5 -m 8G \
       -display none -serial stdio \
       -kernel arch/riscv/boot/Image \
       -dtb arch/riscv/boot/dts/sifive/hifive-unleashed-a00.dtb \
@@ -171,7 +171,7 @@ fix the 32-bit boot issue for Linux kernel v5.10.
   $ make rv32_defconfig
   $ make
 
-Replace ``qemu-system-riscv64`` with ``qemu-system-riscv32`` in the command
+Replace ``lotus-system-riscv64`` with ``lotus-system-riscv32`` in the command
 line above to boot the 32-bit Linux kernel. A rootfs image containing 32-bit
 applications shall be used in order for kernel to boot to user space.
 
@@ -197,7 +197,7 @@ To boot the VxWorks kernel in QEMU with the ``sifive_u`` machine, use:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M sifive_u -smp 5 -m 2G \
+  $ lotus-system-riscv64 -M sifive_u -smp 5 -m 2G \
       -display none -serial stdio \
       -nic tap,ifname=tap0,script=no,downscript=no \
       -kernel /path/to/vxWorks \
@@ -205,7 +205,7 @@ To boot the VxWorks kernel in QEMU with the ``sifive_u`` machine, use:
 
 It is also possible to test 32-bit VxWorks on the ``sifive_u`` machine. Create
 a 32-bit project to build the 32-bit VxWorks image, and use exact the same
-command line options with ``qemu-system-riscv32``.
+command line options with ``lotus-system-riscv32``.
 
 Running U-Boot
 --------------
@@ -290,7 +290,7 @@ to QEMU ``sifive_u`` machine:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M sifive_u,msel=11 -smp 5 -m 8G \
+  $ lotus-system-riscv64 -M sifive_u,msel=11 -smp 5 -m 8G \
       -display none -serial stdio \
       -bios /path/to/u-boot-spl.bin \
       -drive file=/path/to/sdcard.img,if=sd
@@ -299,7 +299,7 @@ Changing msel= value to 6, allows booting U-Boot from the SPI flash:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M sifive_u,msel=6 -smp 5 -m 8G \
+  $ lotus-system-riscv64 -M sifive_u,msel=6 -smp 5 -m 8G \
       -display none -serial stdio \
       -bios /path/to/u-boot-spl.bin \
       -drive file=/path/to/spi-nor.img,if=mtd
@@ -342,7 +342,7 @@ Boot the 64-bit U-Boot S-mode image directly:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M sifive_u -smp 5 -m 2G \
+  $ lotus-system-riscv64 -M sifive_u -smp 5 -m 2G \
       -display none -serial stdio \
       -kernel /path/to/u-boot.bin
 
@@ -368,7 +368,7 @@ Use the same command line options to boot the 32-bit U-Boot S-mode image:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv32 -M sifive_u -smp 5 -m 2G \
+  $ lotus-system-riscv32 -M sifive_u -smp 5 -m 2G \
       -display none -serial stdio \
       -kernel /path/to/u-boot.bin
 

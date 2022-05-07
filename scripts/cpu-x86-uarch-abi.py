@@ -12,7 +12,7 @@ import sys
 if len(sys.argv) != 2:
     print("syntax: %s QMP-SOCK\n\n" % __file__ +
           "Where QMP-SOCK points to a QEMU process such as\n\n" +
-          " # qemu-system-x86_64 -qmp unix:/tmp/qmp,server,nowait " +
+          " # lotus-system-x86_64 -qmp unix:/tmp/qmp,server,nowait " +
           "-display none -accel kvm", file=sys.stderr)
     sys.exit(1)
 
@@ -58,7 +58,7 @@ levels = [
 
 # Assumes externally launched process such as
 #
-#   qemu-system-x86_64 -qmp unix:/tmp/qmp,server,nowait -display none -accel kvm
+#   lotus-system-x86_64 -qmp unix:/tmp/qmp,server,nowait -display none -accel kvm
 #
 # Note different results will be obtained with TCG, as
 # TCG masks out certain features otherwise present in

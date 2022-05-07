@@ -5,7 +5,7 @@ I) Example usage:
 
 # ln -s u-boot.bin mips_bios.bin
 start it:
-qemu-system-mips -L . /dev/null -nographic
+lotus-system-mips -L . /dev/null -nographic
 
 or
 
@@ -15,7 +15,7 @@ create image:
 # dd of=flash bs=1k count=4k if=/dev/zero
 # dd of=flash bs=1k conv=notrunc if=u-boot.bin
 start it:
-# qemu-system-mips -M mips -pflash flash -monitor null -nographic
+# lotus-system-mips -M mips -pflash flash -monitor null -nographic
 
 2) Download kernel + initrd
 
@@ -99,14 +99,14 @@ setenv bootcmd 'run boot_tftp_flash'
 
 10) Now you can boot from flash, ide, ide+ext2 and tfp
 
-# qemu-system-mips -M mips -pflash flash -monitor null -nographic -net nic -net user -tftp `pwd` -hda ide
+# lotus-system-mips -M mips -pflash flash -monitor null -nographic -net nic -net user -tftp `pwd` -hda ide
 
 II) How to debug U-Boot
 
 In order to debug U-Boot you need to start qemu with gdb server support (-s)
 and waiting the connection to start the CPU (-S)
 
-# qemu-system-mips -S -s -M mips -pflash flash -monitor null -nographic -net nic -net user -tftp `pwd` -hda ide
+# lotus-system-mips -S -s -M mips -pflash flash -monitor null -nographic -net nic -net user -tftp `pwd` -hda ide
 
 in an other console you start gdb
 

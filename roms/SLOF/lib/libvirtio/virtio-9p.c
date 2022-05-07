@@ -25,7 +25,7 @@
  *
  * make distclean; cm make qemu
  * sudo cp boot_rom.bin /opt/qemu/share/qemu/slof.bin
- * /opt/qemu/bin/qemu-system-ppc64 -M pseries -m 512 -boot d -nographic -fsdev
+ * /opt/qemu/bin/lotus-system-ppc64 -M pseries -m 512 -boot d -nographic -fsdev
  *    local,id=trule,path=/home/trule/virtfs,security_model=none -device
  *    virtio-9p-spapr,fsdev=trule,mount_tag=trule
  * load virtfs:\some\file

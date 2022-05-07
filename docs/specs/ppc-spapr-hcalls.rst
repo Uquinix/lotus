@@ -2,7 +2,7 @@
 sPAPR hypervisor calls
 ======================
 
-When used with the ``pseries`` machine type, ``qemu-system-ppc64`` implements
+When used with the ``pseries`` machine type, ``lotus-system-ppc64`` implements
 a set of hypervisor calls (a.k.a. hcalls) defined in the Linux on Power
 Architecture Reference ([LoPAR]_) document. This document is a subset of the
 Power Architecture Platform Reference (PAPR+) specification (IBM internal only),

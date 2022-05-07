@@ -63,4 +63,4 @@ firmware. Example:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M stm32vldiscovery -kernel firmware.bin
+  $ lotus-system-arm -M stm32vldiscovery -kernel firmware.bin

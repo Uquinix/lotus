@@ -79,7 +79,7 @@ VirtIO net and block devices on ARM.
 
 .. code-block:: bash
 
-  $ qemu-system-arm -nographic -machine virt -bios u-boot.bin \
+  $ lotus-system-arm -nographic -machine virt -bios u-boot.bin \
     -netdev tap,ifname=tap0,id=net0 \
     -device virtio-net-device,netdev=net0 \
     -drive if=none,file=test.img,format=raw,id=hd0 \
@@ -89,7 +89,7 @@ On x86, command is slightly different to create PCI VirtIO devices.
 
 .. code-block:: bash
 
-  $ qemu-system-i386 -nographic -bios u-boot.rom \
+  $ lotus-system-i386 -nographic -bios u-boot.rom \
     -netdev tap,ifname=tap0,id=net0 \
     -device virtio-net-pci,netdev=net0 \
     -drive if=none,file=test.img,format=raw,id=hd0 \
@@ -102,7 +102,7 @@ and 2 on PCI bus.
 
 .. code-block:: bash
 
-  $ qemu-system-arm -nographic -machine virt -bios u-boot.bin \
+  $ lotus-system-arm -nographic -machine virt -bios u-boot.bin \
     -netdev tap,ifname=tap0,id=net0 \
     -device virtio-net-pci,netdev=net0 \
     -drive if=none,file=test0.img,format=raw,id=hd0 \
@@ -115,7 +115,7 @@ By default QEMU creates VirtIO legacy devices by default. To create non-legacy
 
 .. code-block:: bash
 
-  $ qemu-system-i386 -nographic -bios u-boot.rom \
+  $ lotus-system-i386 -nographic -bios u-boot.rom \
     -netdev tap,ifname=tap0,id=net0 \
     -device virtio-net-pci,netdev=net0,disable-legacy=true,disable-modern=false \
     -drive if=none,file=test.img,format=raw,id=hd0 \

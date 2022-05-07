@@ -72,7 +72,7 @@ legacy and non-legacy devices. In this example, a VM is created
 without passing any additional machine-specific option, using the
 legacy ``ISA serial`` device as console::
 
-  $ qemu-system-x86_64 -M microvm \
+  $ lotus-system-x86_64 -M microvm \
      -enable-kvm -cpu host -m 512m -smp 2 \
      -kernel vmlinux -append "earlyprintk=ttyS0 console=ttyS0 root=/dev/vda" \
      -nodefaults -no-user-config -nographic \
@@ -93,7 +93,7 @@ in the guest).
 This is an example of a VM with all optional legacy features
 disabled::
 
-  $ qemu-system-x86_64 \
+  $ lotus-system-x86_64 \
      -M microvm,x-option-roms=off,pit=off,pic=off,isa-serial=off,rtc=off \
      -enable-kvm -cpu host -m 512m -smp 2 \
      -kernel vmlinux -append "console=hvc0 root=/dev/vda" \

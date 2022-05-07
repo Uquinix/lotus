@@ -14,14 +14,14 @@ So for booting an s390x guest in QEMU, you should always mark the
 device where you want to boot from with the ``bootindex`` property, for
 example::
 
- qemu-system-s390x -drive if=none,id=dr1,file=guest.qcow2 \
+ lotus-system-s390x -drive if=none,id=dr1,file=guest.qcow2 \
                    -device virtio-blk,drive=dr1,bootindex=1
 
 For booting from a CD-ROM ISO image (which needs to include El-Torito boot
 information in order to be bootable), it is recommended to specify a ``scsi-cd``
 device, for example like this::
 
- qemu-system-s390x -blockdev file,node-name=c1,filename=... \
+ lotus-system-s390x -blockdev file,node-name=c1,filename=... \
                    -device virtio-scsi \
                    -device scsi-cd,drive=c1,bootindex=1
 
@@ -69,7 +69,7 @@ If you don't specify the the ``bootindex`` property here, the network bootloader
 firmware code won't get loaded into the guest memory so that the network boot
 will fail. For a successful network boot, try something like this::
 
- qemu-system-s390x -netdev user,id=n1,tftp=...,bootfile=... \
+ lotus-system-s390x -netdev user,id=n1,tftp=...,bootfile=... \
                    -device virtio-net-ccw,netdev=n1,bootindex=1
 
 The network bootloader firmware also has basic support for pxelinux.cfg-style

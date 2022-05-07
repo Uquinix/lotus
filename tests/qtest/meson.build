@@ -302,7 +302,7 @@ foreach dir : target_dirs
   endif
 
   target_base = dir.split('-')[0]
-  qtest_emulator = emulators['qemu-system-' + target_base]
+  qtest_emulator = emulators['lotus-system-' + target_base]
   target_qtests = get_variable('qtests_' + target_base, []) + qtests_generic
 
   test_deps = roms
@@ -312,7 +312,7 @@ foreach dir : target_dirs
     test_deps += [qemu_img]
   endif
   qtest_env.set('G_TEST_DBUS_DAEMON', meson.project_source_root() / 'tests/dbus-vmstate-daemon.sh')
-  qtest_env.set('QTEST_QEMU_BINARY', './qemu-system-' + target_base)
+  qtest_env.set('QTEST_QEMU_BINARY', './lotus-system-' + target_base)
   if have_tools and have_vhost_user_blk_server
     qtest_env.set('QTEST_QEMU_STORAGE_DAEMON_BINARY', './storage-daemon/qemu-storage-daemon')
     test_deps += [qsd]

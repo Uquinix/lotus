@@ -43,7 +43,7 @@ class BaseShell(object):
         parser.add_argument("--debug", dest="debug", default=False, action="store_true")
         parser.add_argument("--verbose", dest="verbose", default=False, action="store_true")
         parser.add_argument("--sleep", dest="sleep", default=15, type=int)
-        parser.add_argument("--binary", dest="binary", default="/usr/bin/qemu-system-x86_64")
+        parser.add_argument("--binary", dest="binary", default="/usr/bin/lotus-system-x86_64")
         parser.add_argument("--dst-host", dest="dst_host", default="localhost")
         parser.add_argument("--kernel", dest="kernel", default="/boot/vmlinuz-%s" % platform.release())
         parser.add_argument("--initrd", dest="initrd", default="tests/migration/initrd-stress.img")

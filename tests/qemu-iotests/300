@@ -117,7 +117,7 @@ class TestDirtyBitmapMigration(iotests.QMPTestCase):
         assert log is not None  # Loaded after shutdown
 
         if msg is None:
-            self.assertNotIn('qemu-system-', log)
+            self.assertNotIn('lotus-system-', log)
         else:
             self.assertIn(msg, log)
 

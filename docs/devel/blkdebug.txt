@@ -46,7 +46,7 @@ value depends on the host.  On Linux, see
 
 Invoke QEMU as follows:
 
-  $ qemu-system-x86_64
+  $ lotus-system-x86_64
         -drive if=none,cache=none,file=blkdebug:blkdebug.conf:test.img,id=drive0 \
         -device virtio-blk-pci,drive=drive0,id=virtio-blk-pci0
 

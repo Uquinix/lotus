@@ -74,7 +74,7 @@ Here is a simple setup with one e1000e NIC :
 
 .. code-block:: bash
 
-  $ qemu-system-ppc64 -m 2G -machine powernv9 -smp 2,cores=2,threads=1 \
+  $ lotus-system-ppc64 -m 2G -machine powernv9 -smp 2,cores=2,threads=1 \
   -accel tcg,thread=single \
   -device e1000e,netdev=net0,mac=C0:FF:EE:00:00:02,bus=pcie.0,addr=0x0 \
   -netdev user,id=net0,hostfwd=::20022-:22,hostname=pnv \
@@ -111,7 +111,7 @@ different PHBs, each with a disk, the second PHB is empty :
 
 .. code-block:: bash
 
-  $ qemu-system-ppc64 -m 2G -machine powernv9 -smp 2,cores=2,threads=1 -accel tcg,thread=single \
+  $ lotus-system-ppc64 -m 2G -machine powernv9 -smp 2,cores=2,threads=1 -accel tcg,thread=single \
   -kernel ./zImage.epapr -initrd ./rootfs.cpio.xz -bios ./skiboot.lid \
   \
   -device megasas,id=scsi0,bus=pcie.0,addr=0x0 \

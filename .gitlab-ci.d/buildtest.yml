@@ -109,7 +109,7 @@ crash-test-debian:
     IMAGE: debian-amd64
   script:
     - cd build
-    - scripts/device-crash-test -q ./qemu-system-i386
+    - scripts/device-crash-test -q ./lotus-system-i386
 
 build-system-fedora:
   extends: .native_build_job_template
@@ -154,8 +154,8 @@ crash-test-fedora:
     IMAGE: fedora
   script:
     - cd build
-    - scripts/device-crash-test -q ./qemu-system-ppc
-    - scripts/device-crash-test -q ./qemu-system-riscv32
+    - scripts/device-crash-test -q ./lotus-system-ppc
+    - scripts/device-crash-test -q ./lotus-system-riscv32
 
 build-system-centos:
   extends: .native_build_job_template
@@ -560,12 +560,12 @@ build-tci:
     - make -j"$JOBS"
     - make tests/qtest/boot-serial-test tests/qtest/cdrom-test tests/qtest/pxe-test
     - for tg in $TARGETS ; do
-        export QTEST_QEMU_BINARY="./qemu-system-${tg}" ;
+        export QTEST_QEMU_BINARY="./lotus-system-${tg}" ;
         ./tests/qtest/boot-serial-test || exit 1 ;
         ./tests/qtest/cdrom-test || exit 1 ;
       done
-    - QTEST_QEMU_BINARY="./qemu-system-x86_64" ./tests/qtest/pxe-test
-    - QTEST_QEMU_BINARY="./qemu-system-s390x" ./tests/qtest/pxe-test -m slow
+    - QTEST_QEMU_BINARY="./lotus-system-x86_64" ./tests/qtest/pxe-test
+    - QTEST_QEMU_BINARY="./lotus-system-s390x" ./tests/qtest/pxe-test -m slow
     - make check-tcg
 
 # Alternate coroutines implementations are only really of interest to KVM users

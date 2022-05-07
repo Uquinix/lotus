@@ -45,7 +45,7 @@ The Orange Pi PC machine can start using the standard -kernel functionality
 for loading a Linux kernel or ELF executable. Additionally, the Orange Pi PC
 machine can also emulate the BootROM which is present on an actual Allwinner H3
 based SoC, which loads the bootloader from a SD card, specified via the -sd argument
-to qemu-system-arm.
+to lotus-system-arm.
 
 Machine-specific options
 """"""""""""""""""""""""
@@ -65,12 +65,12 @@ The following machine-specific options are supported:
   The Security Identifier value can be read by the guest.
   For example, U-Boot uses it to determine a unique MAC address.
 
-The above machine-specific options can be specified in qemu-system-arm
+The above machine-specific options can be specified in lotus-system-arm
 via the '-global' argument, for example:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M orangepi-pc -sd mycard.img \
+  $ lotus-system-arm -M orangepi-pc -sd mycard.img \
        -global allwinner-rtc.base-year=2000
 
 Running mainline Linux
@@ -106,7 +106,7 @@ To boot the newly build linux kernel in QEMU with the Orange Pi PC machine, use:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M orangepi-pc -nic user -nographic \
+  $ lotus-system-arm -M orangepi-pc -nic user -nographic \
       -kernel /path/to/linux/arch/arm/boot/zImage \
       -append 'console=ttyS0,115200' \
       -dtb /path/to/linux/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dtb
@@ -143,7 +143,7 @@ argument and provide the proper root= kernel parameter:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M orangepi-pc -nic user -nographic \
+  $ lotus-system-arm -M orangepi-pc -nic user -nographic \
       -kernel /path/to/linux/arch/arm/boot/zImage \
       -append 'console=ttyS0,115200 root=/dev/mmcblk0p2' \
       -dtb /path/to/linux/arch/arm/boot/dts/sun8i-h3-orangepi-pc.dtb \
@@ -164,7 +164,7 @@ argument and remove the -kernel, -append, -dbt and -initrd arguments:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M orangepi-pc -nic user -nographic \
+  $ lotus-system-arm -M orangepi-pc -nic user -nographic \
        -sd Armbian_19.11.3_Orangepipc_buster_current_5.3.9.img
 
 Note that both the official Orange Pi PC images and Armbian images start
@@ -191,7 +191,7 @@ u-boot binary to the -kernel argument:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M orangepi-pc -nic user -nographic \
+  $ lotus-system-arm -M orangepi-pc -nic user -nographic \
       -kernel /path/to/uboot/u-boot -sd disk.img
 
 Use the following U-boot commands to load and boot a Linux kernel from SD card:
@@ -234,7 +234,7 @@ Start the machine using the following command:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M orangepi-pc -nic user -nographic \
+  $ lotus-system-arm -M orangepi-pc -nic user -nographic \
         -sd armv7.img -global allwinner-rtc.base-year=2000
 
 At the U-Boot stage, interrupt the automatic boot process by pressing a key

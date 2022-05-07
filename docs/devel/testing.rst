@@ -662,7 +662,7 @@ exploiting a QEMU security bug to compromise the host.
 QEMU binaries
 ~~~~~~~~~~~~~
 
-By default, ``qemu-system-x86_64`` is searched in $PATH to run the guest. If
+By default, ``lotus-system-x86_64`` is searched in $PATH to run the guest. If
 there isn't one, or if it is older than 2.10, the test won't work. In this case,
 provide the QEMU binary in env var: ``QEMU=/path/to/qemu-2.10+``.
 
@@ -1044,7 +1044,7 @@ the following approaches:
 1) Set ``qemu_bin``, and use the given binary
 
 2) Do not set ``qemu_bin``, and use a QEMU binary named like
-   "qemu-system-${arch}", either in the current
+   "lotus-system-${arch}", either in the current
    working directory, or in the current source tree.
 
 The resulting ``qemu_bin`` value will be preserved in the
@@ -1158,7 +1158,7 @@ like the following:
 
 .. code::
 
-  PARAMS (key=qemu_bin, path=*, default=./qemu-system-x86_64) => './qemu-system-x86_64
+  PARAMS (key=qemu_bin, path=*, default=./lotus-system-x86_64) => './lotus-system-x86_64
 
 Test
 ^^^^

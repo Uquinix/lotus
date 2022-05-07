@@ -48,4 +48,4 @@ firmware in `ihex format`_. Example:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M microbit -device loader,file=test.hex
+  $ lotus-system-arm -M microbit -device loader,file=test.hex

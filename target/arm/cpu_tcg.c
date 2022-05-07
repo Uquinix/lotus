@@ -932,7 +932,7 @@ static void arm_v7m_class_init(ObjectClass *oc, void *data)
 #ifndef TARGET_AARCH64
 /*
  * -cpu max: a CPU with as many features enabled as our emulation supports.
- * The version of '-cpu max' for qemu-system-aarch64 is defined in cpu64.c;
+ * The version of '-cpu max' for lotus-system-aarch64 is defined in cpu64.c;
  * this only needs to handle 32 bits, and need not care about KVM.
  */
 static void arm_max_initfn(Object *obj)

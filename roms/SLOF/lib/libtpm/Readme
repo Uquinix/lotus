@@ -37,7 +37,7 @@ before it. The file 'boot_rom.bin' is SLOF with vTPM extensions built-in.
 
   In another terminal:
 
-  #> sudo qemu-system-ppc64 -display sdl \
+  #> sudo lotus-system-ppc64 -display sdl \
        -machine pseries,accel=kvm \
        -m 1024 -bios boot_rom.bin -boot menu=on \
        -nodefaults -device VGA -device pci-ohci -device usb-kbd \

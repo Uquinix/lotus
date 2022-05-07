@@ -1615,7 +1615,7 @@ QTestState *qtest_inproc_init(QTestState **s, bool log, const char* arch,
      * Set a dummy path for QTEST_QEMU_BINARY. Doesn't need to exist, but this
      * way, qtest_get_arch works for inproc qtest.
      */
-    gchar *bin_path = g_strconcat("/qemu-system-", arch, NULL);
+    gchar *bin_path = g_strconcat("/lotus-system-", arch, NULL);
     setenv("QTEST_QEMU_BINARY", bin_path, 0);
     g_free(bin_path);
 

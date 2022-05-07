@@ -66,7 +66,7 @@ initial RAM disk for QEMU:
 
 .. code-block:: bash
 
-   $ qemu-system-x86_64 -machine pc-i440fx-2.5 -bios u-boot.rom -m 1G \
+   $ lotus-system-x86_64 -machine pc-i440fx-2.5 -bios u-boot.rom -m 1G \
        -nographic -kernel vmlinuz -initrd initrd
 
 Now the kernel and the initial RAM disk can be loaded to the U-Boot memory via

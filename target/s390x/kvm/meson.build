@@ -8,7 +8,7 @@ s390x_ss.add(when: 'CONFIG_KVM', if_true: files(
 # the vm.allocate_pgste sysctl unnecessary. We enable this program
 # header if
 #  - we build on s390x
-#  - we build the system emulation for s390x (qemu-system-s390x)
+#  - we build the system emulation for s390x (lotus-system-s390x)
 #  - KVM is enabled
 #  - the linker supports --s390-pgste
 if host_machine.cpu_family() == 's390x' and cc.has_link_argument('-Wl,--s390-pgste')

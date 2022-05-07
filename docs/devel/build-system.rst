@@ -123,7 +123,7 @@ process for:
 
    - Tools - ``qemu-img``, ``qemu-nbd``, ``qga`` (guest agent), etc
 
-   - System emulators - ``qemu-system-$ARCH``
+   - System emulators - ``lotus-system-$ARCH``
 
    - Userspace emulators - ``qemu-$ARCH``
 

@@ -4,7 +4,7 @@ QEMU_ARGS="-M powernv -nodefaults -device ipmi-bmc-sim,id=bmc0 -serial none"
 QEMU_ARGS+=" -device isa-serial,chardev=s1 -chardev stdio,id=s1,signal=off"
 
 if [ -z "$QEMU_BIN" ]; then
-    QEMU_BIN="qemu-system-ppc64"
+    QEMU_BIN="lotus-system-ppc64"
 fi
 
 if [ ! $(command -v $QEMU_BIN) ]; then

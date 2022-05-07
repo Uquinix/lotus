@@ -159,7 +159,7 @@ otherwise.
 
 It is possible to troubleshoot unavailable tests by running::
 
-  $ QTEST_QEMU_BINARY=build/qemu-system-x86_64 build/tests/qtest/qos-test --verbose
+  $ QTEST_QEMU_BINARY=build/lotus-system-x86_64 build/tests/qtest/qos-test --verbose
   # ALL QGRAPH EDGES: {
   #   src='virtio-net'
   #      |-> dest='virtio-net-tests/vhost-user/multiqueue' type=2 (node=0x559142109e30)
@@ -195,7 +195,7 @@ there.
 The ``arm/raspi2b`` machine node is listed as "UNAVAILABLE". Although it is
 reachable from the root via '' -> 'arm/raspi2b' the node is unavailable because
 the QEMU binary did not list it when queried by the framework. This is expected
-because we used the ``qemu-system-x86_64`` binary which does not support ARM
+because we used the ``lotus-system-x86_64`` binary which does not support ARM
 machine types.
 
 If a test is unexpectedly listed as "UNAVAILABLE", first check that the "ALL
@@ -612,11 +612,11 @@ or inverting the consumes edge in consumed_by::
             arm/raspi2b --contains--> generic-sdhci
 
 Assuming there the binary is
-``QTEST_QEMU_BINARY=./qemu-system-x86_64``
+``QTEST_QEMU_BINARY=./lotus-system-x86_64``
 a valid test path will be:
 ``/x86_64/pc/1440FX-pcihost/pci-bus-pc/pci-bus/sdhci-pc/sdhci/sdhci-test``
 
-and for the binary ``QTEST_QEMU_BINARY=./qemu-system-arm``:
+and for the binary ``QTEST_QEMU_BINARY=./lotus-system-arm``:
 
 ``/arm/raspi2b/generic-sdhci/sdhci/sdhci-test``
 

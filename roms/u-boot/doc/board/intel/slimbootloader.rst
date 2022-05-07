@@ -84,7 +84,7 @@ The PayloadId can be any 4 Bytes value.
 4. Launch Slim Bootloader on QEMU.
    You should reach at U-Boot serial console::
 
-   $ qemu-system-x86_64 -machine q35 -nographic -serial mon:stdio -pflash Outputs/qemu/SlimBootloader.bin
+   $ lotus-system-x86_64 -machine q35 -nographic -serial mon:stdio -pflash Outputs/qemu/SlimBootloader.bin
 
 Test Linux booting on QEMU target
 ---------------------------------
@@ -100,7 +100,7 @@ Download it from http://downloads.yoctoproject.org/releases/yocto/yocto-2.0/mach
 
 2. Launch Slim Bootloader on QEMU with disk image::
 
-   $ qemu-system-x86_64 -machine q35 -nographic -serial mon:stdio -pflash Outputs/qemu/SlimBootloader.bin -drive id=mydrive,if=none,file=/path/to/core-image-sato-intel-corei7-64.hddimg,format=raw -device ide-hd,drive=mydrive
+   $ lotus-system-x86_64 -machine q35 -nographic -serial mon:stdio -pflash Outputs/qemu/SlimBootloader.bin -drive id=mydrive,if=none,file=/path/to/core-image-sato-intel-corei7-64.hddimg,format=raw -device ide-hd,drive=mydrive
 
 3. Update boot environment values on shell::
 

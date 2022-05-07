@@ -92,7 +92,7 @@ To boot a kernel directly from a Linux build tree:
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M ast2600-evb -nographic \
+  $ lotus-system-arm -M ast2600-evb -nographic \
         -kernel arch/arm/boot/zImage \
         -dtb arch/arm/boot/dts/aspeed-ast2600-evb.dtb \
         -initrd rootfs.cpio
@@ -101,7 +101,7 @@ The image should be attached as an MTD drive. Run :
 
 .. code-block:: bash
 
-  $ qemu-system-arm -M romulus-bmc -nic user \
+  $ lotus-system-arm -M romulus-bmc -nic user \
 	-drive file=obmc-phosphor-image-romulus.static.mtd,format=raw,if=mtd -nographic
 
 Options specific to Aspeed machines are :

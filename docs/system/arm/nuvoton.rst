@@ -89,7 +89,7 @@ The firmware image should be attached as an MTD drive. Example :
 
 .. code-block:: bash
 
-  $ qemu-system-arm -machine quanta-gsj -nographic \
+  $ lotus-system-arm -machine quanta-gsj -nographic \
       -drive file=image-bmc,if=mtd,bus=0,unit=0,format=raw
 
 The default root password for test images is usually ``0penBmc``.

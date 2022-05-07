@@ -55,7 +55,7 @@ options:
 
 .. code-block:: bash
 
-  qemu-system-ppc64 -M pseries <other QEMU arguments>
+  lotus-system-ppc64 -M pseries <other QEMU arguments>
 
 sPAPR devices
 =============
@@ -126,9 +126,9 @@ Currently, there are two implementations of KVM on Power, ``kvm_hv.ko`` and
 If a host supports both KVM modes, and both KVM kernel modules are loaded, it is
 possible to switch between the two modes with the ``kvm-type`` parameter:
 
-* Use ``qemu-system-ppc64 -M pseries,accel=kvm,kvm-type=PR`` to use the
+* Use ``lotus-system-ppc64 -M pseries,accel=kvm,kvm-type=PR`` to use the
   ``kvm_pr.ko`` kernel module.
-* Use ``qemu-system-ppc64 -M pseries,accel=kvm,kvm-type=HV`` to use ``kvm_hv.ko``
+* Use ``lotus-system-ppc64 -M pseries,accel=kvm,kvm-type=HV`` to use ``kvm_hv.ko``
   instead.
 
 KVM-PR
@@ -243,7 +243,7 @@ Launching
 
 To launch a guest which will be permitted to enter PEF secure mode::
 
-  $ qemu-system-ppc64 \
+  $ lotus-system-ppc64 \
       -object pef-guest,id=pef0 \
       -machine confidential-guest-support=pef0 \
       ...

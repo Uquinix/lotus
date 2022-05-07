@@ -209,7 +209,7 @@ Section "Uninstall"
     Delete "$INSTDIR\qemu-img.exe"
     Delete "$INSTDIR\qemu-io.exe"
     Delete "$INSTDIR\qemu.exe"
-    Delete "$INSTDIR\qemu-system-*.exe"
+    Delete "$INSTDIR\lotus-system-*.exe"
     RMDir /r "$INSTDIR\doc"
     RMDir /r "$INSTDIR\share"
     ; Remove generated files

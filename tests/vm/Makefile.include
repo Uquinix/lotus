@@ -120,7 +120,7 @@ vm-build-%: $(IMAGES_DIR)/%.img
 		"  VM-BUILD $*")
 
 vm-boot-serial-%: $(IMAGES_DIR)/%.img
-	qemu-system-x86_64 -enable-kvm -m 4G -smp 2 -nographic \
+	lotus-system-x86_64 -enable-kvm -m 4G -smp 2 -nographic \
 		-drive if=none,id=vblk,cache=writeback,file="$<" \
 		-netdev user,id=vnet \
 		-device virtio-blk-pci,drive=vblk \

@@ -79,7 +79,7 @@ typedef struct QCryptoTLSCredsPSKClass QCryptoTLSCredsPSKClass;
  * <example>
  *   <title>Creating TLS-PSK credential objects via CLI</title>
  *   <programlisting>
- *  qemu-system-x86_64 --object tls-creds-psk,id=tlscreds0,\
+ *  lotus-system-x86_64 --object tls-creds-psk,id=tlscreds0,\
  *          endpoint=client,dir=/path/to/dir[,username=qemu]
  *   </programlisting>
  * </example>

@@ -683,7 +683,7 @@ void aarch64_add_pauth_properties(Object *obj)
 
 /* -cpu max: if KVM is enabled, like -cpu host (best possible with this host);
  * otherwise, a CPU with as many features enabled as our emulation supports.
- * The version of '-cpu max' for qemu-system-arm is defined in cpu.c;
+ * The version of '-cpu max' for lotus-system-arm is defined in cpu.c;
  * this only needs to handle 64 bits.
  */
 static void aarch64_max_initfn(Object *obj)

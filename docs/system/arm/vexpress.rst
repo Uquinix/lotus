@@ -80,7 +80,7 @@ DTB you could also add devices to the virtio-mmio bus.
 
 .. code-block:: bash
 
-  $ qemu-system-arm -cpu cortex-a15 -smp 4 -m 4096 \
+  $ lotus-system-arm -cpu cortex-a15 -smp 4 -m 4096 \
       -machine type=vexpress-a15 -serial mon:stdio \
       -drive if=sd,driver=file,filename=armel-rootfs.ext4 \
       -kernel zImage  \

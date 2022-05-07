@@ -25,24 +25,24 @@ Running U-Boot
 --------------
 The minimal QEMU command line to get U-Boot up and running is::
 
-    $ qemu-system-ppc -nographic -machine ppce500 -bios u-boot
+    $ lotus-system-ppc -nographic -machine ppce500 -bios u-boot
 
-You can also run U-Boot using 'qemu-system-ppc64'::
+You can also run U-Boot using 'lotus-system-ppc64'::
 
-    $ qemu-system-ppc64 -nographic -machine ppce500 -bios u-boot
+    $ lotus-system-ppc64 -nographic -machine ppce500 -bios u-boot
 
 The commands above create a target with 128 MiB memory by default. A freely
 configurable amount of RAM can be created via the '-m' parameter. For example,
 '-m 2G' creates 2 GiB memory for the target, and the memory node in the
 embedded DTB created by QEMU reflects the new setting.
 
-Both qemu-system-ppc and qemu-system-ppc64 provide emulation for the following
+Both lotus-system-ppc and lotus-system-ppc64 provide emulation for the following
 32-bit PowerPC CPUs:
 
 * e500v2
 * e500mc
 
-Additionally qemu-system-ppc64 provides support for the following 64-bit CPUs:
+Additionally lotus-system-ppc64 provides support for the following 64-bit CPUs:
 
 * e5500
 * e6500
@@ -51,7 +51,7 @@ The CPU type can be specified via the '-cpu' command line. If not specified,
 it creates a machine with e500v2 core. The following example shows an e6500
 based machine creation::
 
-    $ qemu-system-ppc64 -nographic -machine ppce500 -cpu e6500 -bios u-boot
+    $ lotus-system-ppc64 -nographic -machine ppce500 -cpu e6500 -bios u-boot
 
 When U-Boot boots, you will notice the following::
 
@@ -67,7 +67,7 @@ built for P4080 (e500mc), P5020 (e5500) and T2080 (e6500).
 By default a VirtIO standard PCI networking device is connected as an ethernet
 interface at PCI address 0.1.0, but we can switch that to an e1000 NIC by::
 
-    $ qemu-system-ppc -nographic -machine ppce500 -bios u-boot \
+    $ lotus-system-ppc -nographic -machine ppce500 -bios u-boot \
                       -nic tap,ifname=tap0,script=no,downscript=no,model=e1000
 
 The QEMU ppce500 machine can also dynamically instantiate an eTSEC device if

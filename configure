@@ -3633,7 +3633,7 @@ for target in $target_list; do
     mkdir -p $target_dir
     case $target in
         *-user) symlink "../qemu-$target_name" "$target_dir/qemu-$target_name" ;;
-        *) symlink "../qemu-system-$target_name" "$target_dir/qemu-system-$target_name" ;;
+        *) symlink "../lotus-system-$target_name" "$target_dir/lotus-system-$target_name" ;;
     esac
 done
 

@@ -265,7 +265,7 @@ be the same id as used in the remote process.
 
 ::
 
-    qemu-system-x86_64 ... -device pci-proxy-dev,id=lsi0,socket=3
+    lotus-system-x86_64 ... -device pci-proxy-dev,id=lsi0,socket=3
 
 can be used to add a device emulated in a remote process
 

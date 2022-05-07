@@ -102,7 +102,7 @@ def is_readable_executable_file(path):
     return os.path.isfile(path) and os.access(path, os.R_OK | os.X_OK)
 
 
-def pick_default_qemu_bin(bin_prefix='qemu-system-', arch=None):
+def pick_default_qemu_bin(bin_prefix='lotus-system-', arch=None):
     """
     Picks the path of a QEMU binary, starting either in the current working
     directory or in the source tree root directory.
@@ -268,7 +268,7 @@ class QemuSystemTest(QemuBaseTest):
     def setUp(self):
         self._vms = {}
 
-        super().setUp('qemu-system-')
+        super().setUp('lotus-system-')
 
         self.machine = self.params.get('machine',
                                        default=self._get_unique_tag_val('machine'))

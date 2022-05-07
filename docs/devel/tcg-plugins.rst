@@ -215,7 +215,7 @@ counted. You can give a value to the ``count`` argument for a class of
 instructions to break it down fully, so for example to see all the system
 registers accesses::
 
-  ./aarch64-softmmu/qemu-system-aarch64 $(QEMU_ARGS) \
+  ./aarch64-softmmu/lotus-system-aarch64 $(QEMU_ARGS) \
     -append "root=/dev/sda2 systemd.unit=benchmark.service" \
     -smp 4 -plugin ./contrib/plugins/libhowvec.so,count=sreg -d plugin
 
@@ -283,14 +283,14 @@ for the plugin is a path for the socket the two instances will
 communicate over::
 
 
-  ./sparc-softmmu/qemu-system-sparc -monitor none -parallel none \
+  ./sparc-softmmu/lotus-system-sparc -monitor none -parallel none \
     -net none -M SS-20 -m 256 -kernel day11/zImage.elf \
     -plugin ./contrib/plugins/liblockstep.so,sockpath=lockstep-sparc.sock \
   -d plugin,nochain
 
 which will eventually report::
 
-  qemu-system-sparc: warning: nic lance.0 has no peer
+  lotus-system-sparc: warning: nic lance.0 has no peer
   @ 0x000000ffd06678 vs 0x000000ffd001e0 (2/1 since last)
   @ 0x000000ffd07d9c vs 0x000000ffd06678 (3/1 since last)
   Δ insn_count @ 0x000000ffd07d9c (809900609) vs 0x000000ffd06678 (809900612)
@@ -343,7 +343,7 @@ Please be aware that this will generate a lot of output.
 
 The plugin takes no argument::
 
-  qemu-system-arm $(QEMU_ARGS) \
+  lotus-system-arm $(QEMU_ARGS) \
     -plugin ./contrib/plugins/libexeclog.so -d plugin
 
 which will output an execution trace following this structure::

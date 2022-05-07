@@ -40,7 +40,7 @@ Following is a description of command-line used to launch mpqemu.
 
   - Example command-line for the remote process is as follows:
 
-      /usr/bin/qemu-system-x86_64                                        \
+      /usr/bin/lotus-system-x86_64                                        \
       -machine x-remote                                                  \
       -device lsi53c895a,id=lsi0                                         \
       -drive id=drive_image2,file=/build/ol7-nvme-test-1.qcow2           \

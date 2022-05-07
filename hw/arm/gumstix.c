@@ -21,7 +21,7 @@
  * # dd of=flash bs=1k conv=notrunc if=u-boot.bin
  * # dd of=flash bs=1k conv=notrunc seek=256 if=rootfs.arm_nofpu.jffs2
  * start it:
- * # qemu-system-arm -M connex -pflash flash -monitor null -nographic
+ * # lotus-system-arm -M connex -pflash flash -monitor null -nographic
  *
  * verdex:
  * =======
@@ -31,7 +31,7 @@
  * # dd of=flash bs=1k conv=notrunc seek=256 if=rootfs.arm_nofpu.jffs2
  * # dd of=flash bs=1k conv=notrunc seek=31744 if=uImage
  * start it:
- * # qemu-system-arm -M verdex -pflash flash -monitor null -nographic -m 289
+ * # lotus-system-arm -M verdex -pflash flash -monitor null -nographic -m 289
  */
 
 #include "qemu/osdep.h"

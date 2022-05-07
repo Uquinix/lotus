@@ -22,7 +22,7 @@ branch of git://git.linux-mips.org/pub/scm/paul/qemu.git and used like so:
   $ cd qemu
   $ ./configure --target-list=mips64el-softmmu
   $ make
-  $ ./mips64el-softmmu/qemu-system-mips64el -M boston -m 2G \
+  $ ./mips64el-softmmu/lotus-system-mips64el -M boston -m 2G \
       -bios u-boot.bin -serial stdio
 
 Please note that QEMU will default to emulating the I6400 CPU which implements

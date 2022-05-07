@@ -4505,12 +4505,12 @@ SRST
 
     ::
 
-        qemu-system-sparc -prom-env 'auto-boot?=false' \
+        lotus-system-sparc -prom-env 'auto-boot?=false' \
          -prom-env 'boot-device=sd(0,2,0):d' -prom-env 'boot-args=linux single'
 
     ::
 
-        qemu-system-ppc -prom-env 'auto-boot?=false' \
+        lotus-system-ppc -prom-env 'auto-boot?=false' \
          -prom-env 'boot-device=hd:2,\yaboot' \
          -prom-env 'boot-args=conf=hd:2,\yaboot.conf'
 ERST

@@ -24,7 +24,7 @@ If either case is successful, a `npcm7xx_bootrom.bin` file will be produced.
 The Boot ROM image may be passed to a QEMU system emulator using the `-bios` option. For example like this:
 
 ```
-qemu-system-arm -machine quanta-gsj -nographic \
+lotus-system-arm -machine quanta-gsj -nographic \
     -bios "${IMAGES}/npcm7xx_bootrom.bin"
     -drive file="${IMAGES}/image-bmc,if=mtd,bus=0,unit=0,format=raw,snapshot=on"
 ```

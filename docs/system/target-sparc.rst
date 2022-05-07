@@ -3,7 +3,7 @@
 Sparc32 System emulator
 -----------------------
 
-Use the executable ``qemu-system-sparc`` to simulate the following Sun4m
+Use the executable ``lotus-system-sparc`` to simulate the following Sun4m
 architecture machines:
 
 -  SPARCstation 4

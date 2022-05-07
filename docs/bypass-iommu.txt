@@ -37,7 +37,7 @@ root bus.
 2. Here is the detailed qemu command line for 'virt' machine with PXB on
 AArch64:
 
-qemu-system-aarch64 \
+lotus-system-aarch64 \
  -machine virt,kernel_irqchip=on,iommu=smmuv3,default_bus_bypass_iommu=true \
  -device pxb-pcie,bus_nr=0x10,id=pci.10,bus=pcie.0,addr=0x3.0x1 \
  -device pxb-pcie,bus_nr=0x20,id=pci.20,bus=pcie.0,addr=0x3.0x2,bypass_iommu=true \
@@ -50,7 +50,7 @@ And we got:
 3. Here is the detailed qemu command line for 'q35' machine with PXB on
 x86 architecture:
 
-qemu-system-x86_64 \
+lotus-system-x86_64 \
  -machine q35,accel=kvm,default_bus_bypass_iommu=true \
  -device pxb-pcie,bus_nr=0x10,id=pci.10,bus=pcie.0,addr=0x3 \
  -device pxb-pcie,bus_nr=0x20,id=pci.20,bus=pcie.0,addr=0x4,bypass_iommu=true \

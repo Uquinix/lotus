@@ -84,7 +84,7 @@ typedef struct QCryptoTLSCredsAnonClass QCryptoTLSCredsAnonClass;
  * <example>
  *   <title>Creating anonymous TLS credential objects via CLI</title>
  *   <programlisting>
- *  qemu-system-x86_64 -object tls-creds-anon,id=tlscreds0,\
+ *  lotus-system-x86_64 -object tls-creds-anon,id=tlscreds0,\
  *          endpoint=server,verify-peer=off,\
  *          dir=/path/to/x509/certdir/
  *   </programlisting>

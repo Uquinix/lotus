@@ -4,11 +4,11 @@ Arm System emulator
 -------------------
 
 QEMU can emulate both 32-bit and 64-bit Arm CPUs. Use the
-``qemu-system-aarch64`` executable to simulate a 64-bit Arm machine.
-You can use either ``qemu-system-arm`` or ``qemu-system-aarch64``
+``lotus-system-aarch64`` executable to simulate a 64-bit Arm machine.
+You can use either ``lotus-system-arm`` or ``lotus-system-aarch64``
 to simulate a 32-bit Arm machine: in general, command lines that
-work for ``qemu-system-arm`` will behave the same when used with
-``qemu-system-aarch64``.
+work for ``lotus-system-arm`` will behave the same when used with
+``lotus-system-aarch64``.
 
 QEMU has generally good support for Arm guests. It has support for
 nearly fifty different machines. The reason we support so many is that
@@ -65,7 +65,7 @@ Board-specific documentation
 
 Unfortunately many of the Arm boards QEMU supports are currently
 undocumented; you can get a complete list by running
-``qemu-system-aarch64 --machine help``.
+``lotus-system-aarch64 --machine help``.
 
 ..
    This table of contents should be kept sorted alphabetically

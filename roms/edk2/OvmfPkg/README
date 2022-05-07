@@ -60,8 +60,8 @@ https://github.com/tianocore/tianocore.github.io/wiki/How%20to%20build%20OVMF
 === RUNNING OVMF on QEMU ===
 
 * QEMU 0.12.2 or later is required.
-* Be sure to use qemu-system-x86_64, if you are using and X64 firmware.
-  (qemu-system-x86_64 works for the IA32 firmware as well, of course.)
+* Be sure to use lotus-system-x86_64, if you are using and X64 firmware.
+  (lotus-system-x86_64 works for the IA32 firmware as well, of course.)
 * Use OVMF for QEMU firmware (3 options available)
   - Option 1: QEMU 1.6 or newer; Use QEMU -pflash parameter
     * QEMU/OVMF will use emulated flash, and fully support UEFI variables
@@ -147,15 +147,15 @@ can be used on Windows.
 
 * QEMU binary and options specific to 32-bit guests:
 
-  $ qemu-system-i386 -cpu coreduo,-nx \
+  $ lotus-system-i386 -cpu coreduo,-nx \
 
   or
 
-  $ qemu-system-x86_64 -cpu <MODEL>,-lm,-nx \
+  $ lotus-system-x86_64 -cpu <MODEL>,-lm,-nx \
 
 * QEMU binary for running 64-bit guests (no particular options):
 
-  $ qemu-system-x86_64 \
+  $ lotus-system-x86_64 \
 
 * Flags common to all SMM scenarios (only the Q35 machine type is supported):
 

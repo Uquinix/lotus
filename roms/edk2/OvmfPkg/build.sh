@@ -174,10 +174,10 @@ case $PROCESSOR in
       # The user set the QEMU_COMMAND variable. We'll use it to run QEMU.
       #
       :
-    elif  [ -x `which qemu-system-i386` ]; then
-      QEMU_COMMAND=qemu-system-i386
-    elif  [ -x `which qemu-system-x86_64` ]; then
-      QEMU_COMMAND=qemu-system-x86_64
+    elif  [ -x `which lotus-system-i386` ]; then
+      QEMU_COMMAND=lotus-system-i386
+    elif  [ -x `which lotus-system-x86_64` ]; then
+      QEMU_COMMAND=lotus-system-x86_64
     elif  [ -x `which qemu` ]; then
       QEMU_COMMAND=qemu
     else
@@ -190,7 +190,7 @@ case $PROCESSOR in
       #
       # The user didn't set the QEMU_COMMAND variable.
       #
-      QEMU_COMMAND=qemu-system-x86_64
+      QEMU_COMMAND=lotus-system-x86_64
     fi
     ;;
   *)

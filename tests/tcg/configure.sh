@@ -237,7 +237,7 @@ for target in $target_list; do
       ;;
     *-softmmu)
       echo "CONFIG_SOFTMMU=y" >> $config_target_mak
-      echo "QEMU=$PWD/qemu-system-$arch" >> $config_target_mak
+      echo "QEMU=$PWD/lotus-system-$arch" >> $config_target_mak
       ;;
   esac
 

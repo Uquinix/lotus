@@ -150,9 +150,9 @@ class TestEnv(ContextManager['TestEnv']):
         if 'ppc64' in arch:
             arch = 'ppc64'
 
-        self.qemu_prog = os.getenv('QEMU_PROG', root(f'qemu-system-{arch}'))
+        self.qemu_prog = os.getenv('QEMU_PROG', root(f'lotus-system-{arch}'))
         if not os.path.exists(self.qemu_prog):
-            pattern = root('qemu-system-*')
+            pattern = root('lotus-system-*')
             try:
                 progs = sorted(glob.iglob(pattern))
                 self.qemu_prog = next(p for p in progs if isxfile(p))
@@ -242,7 +242,7 @@ class TestEnv(ContextManager['TestEnv']):
             ('tricore', 'tricore_testboard')
         )
         for suffix, machine in machine_map:
-            if self.qemu_prog.endswith(f'qemu-system-{suffix}'):
+            if self.qemu_prog.endswith(f'lotus-system-{suffix}'):
                 self.qemu_options += f' -machine {machine}'
 
         # QEMU_DEFAULT_MACHINE

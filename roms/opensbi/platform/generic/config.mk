@@ -14,7 +14,7 @@ platform-asflags-y =
 platform-ldflags-y =
 
 # Command for platform specific "make run"
-platform-runcmd = qemu-system-riscv$(PLATFORM_RISCV_XLEN) -M virt -m 256M \
+platform-runcmd = lotus-system-riscv$(PLATFORM_RISCV_XLEN) -M virt -m 256M \
   -nographic -bios $(build_dir)/platform/generic/firmware/fw_payload.elf
 
 # Blobs to build

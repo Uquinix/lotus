@@ -35,13 +35,13 @@ These DTBs should have the following requirements:
 * The number of subnodes under /cpus node should match QEMU's ``-smp`` option
 * The /memory reg size should match QEMU’s selected ram_size via ``-m``
 
-Both ``qemu-system-ppc`` and ``qemu-system-ppc64`` provide emulation for the
+Both ``lotus-system-ppc`` and ``lotus-system-ppc64`` provide emulation for the
 following 32-bit PowerPC CPUs:
 
 * e500v2
 * e500mc
 
-Additionally ``qemu-system-ppc64`` provides support for the following 64-bit
+Additionally ``lotus-system-ppc64`` provides support for the following 64-bit
 PowerPC CPUs:
 
 * e5500
@@ -53,7 +53,7 @@ based machine creation:
 
 .. code-block:: bash
 
-  $ qemu-system-ppc64 -nographic -M ppce500 -cpu e6500
+  $ lotus-system-ppc64 -nographic -M ppce500 -cpu e6500
 
 Boot options
 ------------
@@ -99,7 +99,7 @@ To boot the newly built Linux kernel in QEMU with the ``ppce500`` machine:
 
 .. code-block:: bash
 
-  $ qemu-system-ppc64 -M ppce500 -cpu e5500 -smp 4 -m 2G \
+  $ lotus-system-ppc64 -M ppce500 -cpu e5500 -smp 4 -m 2G \
       -display none -serial stdio \
       -kernel vmlinux \
       -initrd /path/to/rootfs.cpio \
@@ -113,7 +113,7 @@ To boot the 32-bit Linux kernel:
 
 .. code-block:: bash
 
-  $ qemu-system-ppc{64|32} -M ppce500 -cpu e500mc -smp 4 -m 2G \
+  $ lotus-system-ppc{64|32} -M ppce500 -cpu e500mc -smp 4 -m 2G \
       -display none -serial stdio \
       -kernel vmlinux \
       -initrd /path/to/rootfs.cpio \
@@ -151,7 +151,7 @@ interface at PCI address 0.1.0, but we can switch that to an e1000 NIC by:
 
 .. code-block:: bash
 
-  $ qemu-system-ppc -M ppce500 -smp 4 -m 2G \
+  $ lotus-system-ppc -M ppce500 -smp 4 -m 2G \
                     -display none -serial stdio \
                     -bios u-boot \
                     -nic tap,ifname=tap0,script=no,downscript=no,model=e1000

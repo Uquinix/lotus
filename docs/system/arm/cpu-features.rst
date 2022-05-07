@@ -38,7 +38,7 @@ Below are some examples where ``scripts/qmp/qmp-shell`` (see the top comment
 block in the script for usage) is used to issue the QMP commands.
 
 1. Determine which CPU features are available for the ``max`` CPU type
-   (Note, we started QEMU with qemu-system-aarch64, so ``max`` is
+   (Note, we started QEMU with lotus-system-aarch64, so ``max`` is
    implementing the ARMv8-A reference manual in this case)::
 
       (QEMU) query-cpu-model-expansion type=full model={"name":"max"}
@@ -155,7 +155,7 @@ After determining which CPU features are available and supported for a
 given CPU type, then they may be selectively enabled or disabled on the
 QEMU command line with that CPU type::
 
-  $ qemu-system-aarch64 -M virt -cpu max,pmu=off,sve=on,sve128=on,sve256=on
+  $ lotus-system-aarch64 -M virt -cpu max,pmu=off,sve=on,sve128=on,sve256=on
 
 The example above disables the PMU and enables the first two SVE vector
 lengths for the ``max`` CPU type.  Note, the ``sve=on`` isn't actually
@@ -323,45 +323,45 @@ SVE CPU Property Examples
 
   1) Disable SVE::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve=off
+     $ lotus-system-aarch64 -M virt -cpu max,sve=off
 
   2) Implicitly enable all vector lengths for the ``max`` CPU type::
 
-     $ qemu-system-aarch64 -M virt -cpu max
+     $ lotus-system-aarch64 -M virt -cpu max
 
   3) When KVM is enabled, implicitly enable all host CPU supported vector
      lengths with the ``host`` CPU type::
 
-     $ qemu-system-aarch64 -M virt,accel=kvm -cpu host
+     $ lotus-system-aarch64 -M virt,accel=kvm -cpu host
 
   4) Only enable the 128-bit vector length::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve128=on
+     $ lotus-system-aarch64 -M virt -cpu max,sve128=on
 
   5) Disable the 512-bit vector length and all larger vector lengths,
      since 512 is a power-of-two.  This results in all the smaller,
      uninitialized lengths (128, 256, and 384) defaulting to enabled::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve512=off
+     $ lotus-system-aarch64 -M virt -cpu max,sve512=off
 
   6) Enable the 128-bit, 256-bit, and 512-bit vector lengths::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve128=on,sve256=on,sve512=on
+     $ lotus-system-aarch64 -M virt -cpu max,sve128=on,sve256=on,sve512=on
 
   7) The same as (6), but since the 128-bit and 256-bit vector
      lengths are required for the 512-bit vector length to be enabled,
      then allow them to be auto-enabled::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve512=on
+     $ lotus-system-aarch64 -M virt -cpu max,sve512=on
 
   8) Do the same as (7), but by first disabling SVE and then re-enabling it::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve=off,sve512=on,sve=on
+     $ lotus-system-aarch64 -M virt -cpu max,sve=off,sve512=on,sve=on
 
   9) Force errors regarding the last vector length::
 
-     $ qemu-system-aarch64 -M virt -cpu max,sve128=off
-     $ qemu-system-aarch64 -M virt -cpu max,sve=off,sve128=off,sve=on
+     $ lotus-system-aarch64 -M virt -cpu max,sve128=off
+     $ lotus-system-aarch64 -M virt -cpu max,sve=off,sve128=off,sve=on
 
 SVE CPU Property Recommendations
 --------------------------------

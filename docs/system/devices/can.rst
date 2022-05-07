@@ -63,9 +63,9 @@ The ''kvaser_pci'' board/device model is compatible with and has been tested wit
 the ''kvaser_pci'' driver included in mainline Linux kernel.
 The tested setup was Linux 4.9 kernel on the host and guest side.
 
-Example for qemu-system-x86_64::
+Example for lotus-system-x86_64::
 
-    qemu-system-x86_64 -accel kvm -kernel /boot/vmlinuz-4.9.0-4-amd64 \
+    lotus-system-x86_64 -accel kvm -kernel /boot/vmlinuz-4.9.0-4-amd64 \
       -initrd ramdisk.cpio \
       -virtfs local,path=shareddir,security_model=none,mount_tag=shareddir \
       -object can-bus,id=canbus0 \
@@ -73,9 +73,9 @@ Example for qemu-system-x86_64::
       -device kvaser_pci,canbus=canbus0 \
       -nographic -append "console=ttyS0"
 
-Example for qemu-system-arm::
+Example for lotus-system-arm::
 
-    qemu-system-arm -cpu arm1176 -m 256 -M versatilepb \
+    lotus-system-arm -cpu arm1176 -m 256 -M versatilepb \
       -kernel kernel-qemu-arm1176-versatilepb \
       -hda rpi-wheezy-overlay \
       -append "console=ttyAMA0 root=/dev/sda2 ro init=/sbin/init-overlay" \
@@ -118,7 +118,7 @@ Linux system (SocketCAN used) and to both CTU CAN FD cores emulated
 on the corresponding PCI card expects that host system CAN bus
 is setup according to the previous SJA1000 section::
 
-  qemu-system-x86_64 -enable-kvm -kernel /boot/vmlinuz-4.19.52+ \
+  lotus-system-x86_64 -enable-kvm -kernel /boot/vmlinuz-4.19.52+ \
       -initrd ramdisk.cpio \
       -virtfs local,path=shareddir,security_model=none,mount_tag=shareddir \
       -vga cirrus \

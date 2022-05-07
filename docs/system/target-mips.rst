@@ -4,8 +4,8 @@ MIPS System emulator
 --------------------
 
 Four executables cover simulation of 32 and 64-bit MIPS systems in both
-endian options, ``qemu-system-mips``, ``qemu-system-mipsel``
-``qemu-system-mips64`` and ``qemu-system-mips64el``. Five different
+endian options, ``lotus-system-mips``, ``lotus-system-mipsel``
+``lotus-system-mips64`` and ``lotus-system-mips64el``. Five different
 machine types are emulated:
 
 -  A generic ISA PC-like machine \"mips\"
@@ -110,12 +110,12 @@ what the proprietary MIPS emulator uses for running Linux. It supports:
 nanoMIPS System emulator
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Executable ``qemu-system-mipsel`` also covers simulation of 32-bit
+Executable ``lotus-system-mipsel`` also covers simulation of 32-bit
 nanoMIPS system in little endian mode:
 
 -  nanoMIPS I7200 CPU
 
-Example of ``qemu-system-mipsel`` usage for nanoMIPS is shown below:
+Example of ``lotus-system-mipsel`` usage for nanoMIPS is shown below:
 
 Download ``<disk_image_file>`` from
 https://mipsdistros.mips.com/LinuxDistro/nanomips/buildroot/index.html.
@@ -125,6 +125,6 @@ https://mipsdistros.mips.com/LinuxDistro/nanomips/kernels/v4.15.18-432-gb2eb9a8b
 
 Start system emulation of Malta board with nanoMIPS I7200 CPU::
 
-   qemu-system-mipsel -cpu I7200 -kernel <kernel_image_file> \
+   lotus-system-mipsel -cpu I7200 -kernel <kernel_image_file> \
        -M malta -serial stdio -m <memory_size> -hda <disk_image_file> \
        -append "mem=256m@0x0 rw console=ttyS0 vga=cirrus vesa=0x111 root=/dev/sda"

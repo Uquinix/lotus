@@ -213,8 +213,8 @@ testing:
         # Testing script will be invoked under the git checkout with
         # HEAD pointing to a commit that has the patches applied on top of "base"
         # branch
-        if qemu-system-x86_64 --help >/dev/null 2>&1; then
-          QEMU=qemu-system-x86_64
+        if lotus-system-x86_64 --help >/dev/null 2>&1; then
+          QEMU=lotus-system-x86_64
         elif /usr/libexec/qemu-kvm --help >/dev/null 2>&1; then
           QEMU=/usr/libexec/qemu-kvm
         else
@@ -266,7 +266,7 @@ testing:
     qemu-x86:
       script: |
         #!/bin/bash
-        if qemu-system-x86_64 --help >/dev/null 2>&1; then
+        if lotus-system-x86_64 --help >/dev/null 2>&1; then
           :
         elif /usr/libexec/qemu-kvm --help >/dev/null 2>&1; then
           :

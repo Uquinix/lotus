@@ -128,13 +128,13 @@ def main():
                                      formatter_class=argparse.RawDescriptionHelpFormatter,
                                      epilog="""
 
-To watch all trace points on the qemu-system-x86_64 binary:
+To watch all trace points on the lotus-system-x86_64 binary:
 
-   %(argv0)s run qemu-system-x86_64
+   %(argv0)s run lotus-system-x86_64
 
 To only watch the trace points matching the qio* and qcrypto* patterns
 
-   %(argv0)s run qemu-system-x86_64 'qio*' 'qcrypto*'
+   %(argv0)s run lotus-system-x86_64 'qio*' 'qcrypto*'
 """ % {"argv0": sys.argv[0]})
     runparser.set_defaults(func=cmd_run)
     runparser.add_argument("--pid", "-p", dest="pid",
@@ -147,13 +147,13 @@ To only watch the trace points matching the qio* and qcrypto* patterns
                                       formatter_class=argparse.RawDescriptionHelpFormatter,
                                       epilog="""
 
-To list all trace points on the qemu-system-x86_64 binary:
+To list all trace points on the lotus-system-x86_64 binary:
 
-   %(argv0)s list qemu-system-x86_64
+   %(argv0)s list lotus-system-x86_64
 
 To only list the trace points matching the qio* and qcrypto* patterns
 
-   %(argv0)s list qemu-system-x86_64 'qio*' 'qcrypto*'
+   %(argv0)s list lotus-system-x86_64 'qio*' 'qcrypto*'
 """ % {"argv0": sys.argv[0]})
     listparser.set_defaults(func=cmd_list)
     listparser.add_argument("binary", help="QEMU system or user emulator binary")

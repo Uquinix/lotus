@@ -28,19 +28,19 @@ QEMU is a fancy emulator that can enable us to test U-Boot without access to
 a real x86 board. Please make sure your QEMU version is 2.3.0 or above test
 U-Boot. To launch QEMU with u-boot.rom, call QEMU as follows::
 
-   $ qemu-system-i386 -nographic -bios path/to/u-boot.rom
+   $ lotus-system-i386 -nographic -bios path/to/u-boot.rom
 
 This will instantiate an emulated x86 board with i440FX and PIIX chipset. QEMU
 also supports emulating an x86 board with Q35 and ICH9 based chipset, which is
 also supported by U-Boot. To instantiate such a machine, call QEMU with::
 
-   $ qemu-system-i386 -nographic -bios path/to/u-boot.rom -M q35
+   $ lotus-system-i386 -nographic -bios path/to/u-boot.rom -M q35
 
 Note by default QEMU instantiated boards only have 128 MiB system memory. But
 it is enough to have U-Boot boot and function correctly. You can increase the
 system memory by pass '-m' parameter to QEMU if you want more memory::
 
-   $ qemu-system-i386 -nographic -bios path/to/u-boot.rom -m 1024
+   $ lotus-system-i386 -nographic -bios path/to/u-boot.rom -m 1024
 
 This creates a board with 1 GiB system memory. Currently U-Boot for QEMU only
 supports 3 GiB maximum system memory and reserves the last 1 GiB address space
@@ -77,7 +77,7 @@ these informtion from fw_cfg interface, which saves the time of loading them
 from hard disk or network again, through emulated devices. To use it , simply
 providing them in QEMU command line::
 
-   $ qemu-system-i386 -nographic -bios path/to/u-boot.rom -m 1024 \
+   $ lotus-system-i386 -nographic -bios path/to/u-boot.rom -m 1024 \
      -kernel /path/to/bzImage -append 'root=/dev/ram console=ttyS0' \
      -initrd /path/to/initrd -smp 8
 
@@ -103,9 +103,9 @@ Here the kernel (bzImage) is loaded to 01000000 and initrd is to 04000000. Then,
 
    => zboot 01000000 - 04000000 1b1ab50
 
-To run 64-bit U-Boot, qemu-system-x86_64 should be used instead, e.g.::
+To run 64-bit U-Boot, lotus-system-x86_64 should be used instead, e.g.::
 
-   $ qemu-system-x86_64 -nographic -bios path/to/u-boot.rom
+   $ lotus-system-x86_64 -nographic -bios path/to/u-boot.rom
 
 A specific CPU can be specified via the '-cpu' parameter but please make
 sure the specified CPU supports 64-bit like '-cpu core2duo'. Conversely

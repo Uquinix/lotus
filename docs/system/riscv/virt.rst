@@ -81,7 +81,7 @@ To boot the newly built Linux kernel in QEMU with the ``virt`` machine:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M virt -smp 4 -m 2G \
+  $ lotus-system-riscv64 -M virt -smp 4 -m 2G \
       -display none -serial stdio \
       -kernel arch/riscv/boot/Image \
       -initrd /path/to/rootfs.cpio \
@@ -100,7 +100,7 @@ fix the 32-bit boot issue for Linux kernel v5.12.
   $ make rv32_defconfig
   $ make
 
-Replace ``qemu-system-riscv64`` with ``qemu-system-riscv32`` in the command
+Replace ``lotus-system-riscv64`` with ``lotus-system-riscv32`` in the command
 line above to boot the 32-bit Linux kernel. A rootfs image containing 32-bit
 applications shall be used in order for kernel to boot to user space.
 
@@ -120,7 +120,7 @@ Boot the 64-bit U-Boot S-mode image directly:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M virt -smp 4 -m 2G \
+  $ lotus-system-riscv64 -M virt -smp 4 -m 2G \
       -display none -serial stdio \
       -kernel /path/to/u-boot.bin
 
@@ -138,11 +138,11 @@ The minimal QEMU commands to run U-Boot SPL are:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M virt -smp 4 -m 2G \
+  $ lotus-system-riscv64 -M virt -smp 4 -m 2G \
       -display none -serial stdio \
       -bios /path/to/u-boot-spl \
       -device loader,file=/path/to/u-boot.itb,addr=0x80200000
 
 To test 32-bit U-Boot images, switch to use qemu-riscv32_smode_defconfig and
-riscv32_spl_defconfig builds, and replace ``qemu-system-riscv64`` with
-``qemu-system-riscv32`` in the command lines above to boot the 32-bit U-Boot.
+riscv32_spl_defconfig builds, and replace ``lotus-system-riscv64`` with
+``lotus-system-riscv32`` in the command lines above to boot the 32-bit U-Boot.

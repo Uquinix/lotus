@@ -517,7 +517,7 @@ facilities:
    are installed on the host system. The feature is s390-specific and is
    represented as a parameter of the -cpu option on the QEMU command line::
 
-      qemu-system-s390x -cpu $model,ap=on|off
+      lotus-system-s390x -cpu $model,ap=on|off
 
    Where:
 
@@ -540,7 +540,7 @@ facilities:
    s390-specific and is represented as a parameter of the -cpu option on the
    QEMU command line::
 
-      qemu-system-s390x -cpu $model,apqci=on|off
+      lotus-system-s390x -cpu $model,apqci=on|off
 
    Where:
 
@@ -570,7 +570,7 @@ facilities:
    s390-specific and is represented as a parameter of the -cpu option on the
    QEMU command line::
 
-      qemu-system-s390x -cpu $model,apft=on|off
+      lotus-system-s390x -cpu $model,apft=on|off
 
    Where:
 
@@ -862,15 +862,15 @@ These are the steps:
 
 5. Start Guest1::
 
-   /usr/bin/qemu-system-s390x ... -cpu host,ap=on,apqci=on,apft=on -device vfio-ap,sysfsdev=/sys/devices/vfio_ap/matrix/$uuid1 ...
+   /usr/bin/lotus-system-s390x ... -cpu host,ap=on,apqci=on,apft=on -device vfio-ap,sysfsdev=/sys/devices/vfio_ap/matrix/$uuid1 ...
 
 7. Start Guest2::
 
-   /usr/bin/qemu-system-s390x ... -cpu host,ap=on,apqci=on,apft=on -device vfio-ap,sysfsdev=/sys/devices/vfio_ap/matrix/$uuid2 ...
+   /usr/bin/lotus-system-s390x ... -cpu host,ap=on,apqci=on,apft=on -device vfio-ap,sysfsdev=/sys/devices/vfio_ap/matrix/$uuid2 ...
 
 7. Start Guest3::
 
-   /usr/bin/qemu-system-s390x ... -cpu host,ap=on,apqci=on,apft=on -device vfio-ap,sysfsdev=/sys/devices/vfio_ap/matrix/$uuid3 ...
+   /usr/bin/lotus-system-s390x ... -cpu host,ap=on,apqci=on,apft=on -device vfio-ap,sysfsdev=/sys/devices/vfio_ap/matrix/$uuid3 ...
 
 When the guest is shut down, the mediated matrix devices may be removed.
 

@@ -27,7 +27,7 @@ make PLATFORM=generic
 
 Run:
 ```
-qemu-system-riscv64 -M virt -m 256M -nographic \
+lotus-system-riscv64 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.bin
 ```
 
@@ -43,12 +43,12 @@ make PLATFORM=generic FW_PAYLOAD_PATH=<uboot_build_directory>/u-boot.bin
 
 Run:
 ```
-qemu-system-riscv64 -M virt -m 256M -nographic \
+lotus-system-riscv64 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.elf
 ```
 or
 ```
-qemu-system-riscv64 -M virt -m 256M -nographic \
+lotus-system-riscv64 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_jump.bin \
 	-kernel <uboot_build_directory>/u-boot.bin
 ```
@@ -65,7 +65,7 @@ make PLATFORM=generic FW_PAYLOAD_PATH=<linux_build_directory>/arch/riscv/boot/Im
 
 Run:
 ```
-qemu-system-riscv64 -M virt -m 256M -nographic \
+lotus-system-riscv64 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.elf \
 	-drive file=<path_to_linux_rootfs>,format=raw,id=hd0 \
 	-device virtio-blk-device,drive=hd0 \
@@ -73,7 +73,7 @@ qemu-system-riscv64 -M virt -m 256M -nographic \
 ```
 or
 ```
-qemu-system-riscv64 -M virt -m 256M -nographic \
+lotus-system-riscv64 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_jump.bin \
 	-kernel <linux_build_directory>/arch/riscv/boot/Image \
 	-drive file=<path_to_linux_rootfs>,format=raw,id=hd0 \
@@ -94,7 +94,7 @@ make PLATFORM=generic PLATFORM_RISCV_XLEN=32
 
 Run:
 ```
-qemu-system-riscv32 -M virt -m 256M -nographic \
+lotus-system-riscv32 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.bin
 ```
 
@@ -110,12 +110,12 @@ make PLATFORM=generic PLATFORM_RISCV_XLEN=32 FW_PAYLOAD_PATH=<uboot_build_direct
 
 Run:
 ```
-qemu-system-riscv32 -M virt -m 256M -nographic \
+lotus-system-riscv32 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.elf
 ```
 or
 ```
-qemu-system-riscv32 -M virt -m 256M -nographic \
+lotus-system-riscv32 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_jump.bin \
 	-kernel <uboot_build_directory>/u-boot.bin
 ```
@@ -132,7 +132,7 @@ make PLATFORM=generic PLATFORM_RISCV_XLEN=32 FW_PAYLOAD_PATH=<linux_build_direct
 
 Run:
 ```
-qemu-system-riscv32 -M virt -m 256M -nographic \
+lotus-system-riscv32 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.elf \
 	-drive file=<path_to_linux_rootfs>,format=raw,id=hd0 \
 	-device virtio-blk-device,drive=hd0 \
@@ -140,7 +140,7 @@ qemu-system-riscv32 -M virt -m 256M -nographic \
 ```
 or
 ```
-qemu-system-riscv32 -M virt -m 256M -nographic \
+lotus-system-riscv32 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_jump.bin \
 	-kernel <linux_build_directory>/arch/riscv/boot/Image \
 	-drive file=<path_to_linux_rootfs>,format=raw,id=hd0 \
@@ -154,7 +154,7 @@ Debugging with GDB
 In a first console start OpenSBI with QEMU:
 
 ```
-qemu-system-riscv64 -M virt -m 256M -nographic \
+lotus-system-riscv64 -M virt -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.bin \
 	-gdb tcp::1234 \
 	-S

@@ -51,7 +51,7 @@ shown here.
 
 First, QEMU should be started like this::
 
- # qemu-system-TARGET [...] \
+ # lotus-system-TARGET [...] \
      -chardev socket,id=qmp,port=4444,host=localhost,server=on \
      -mon chardev=qmp,mode=control,pretty=on
 

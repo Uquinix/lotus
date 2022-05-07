@@ -35,7 +35,7 @@ def main():
             os.path.join(destdir + args.prefix, "system-emulations.nsh"), "w"
         ) as nsh:
             for exe in glob.glob(
-                os.path.join(destdir + args.prefix, "qemu-system-*.exe")
+                os.path.join(destdir + args.prefix, "lotus-system-*.exe")
             ):
                 exe = os.path.basename(exe)
                 arch = exe[12:-4]

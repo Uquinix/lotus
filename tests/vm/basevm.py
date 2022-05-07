@@ -502,10 +502,10 @@ def get_qemu_path(arch, build_path=None):
         qemu_path = os.environ["QEMU"]
     elif build_path:
         qemu_path = os.path.join(build_path, arch + "-softmmu")
-        qemu_path = os.path.join(qemu_path, "qemu-system-" + arch)
+        qemu_path = os.path.join(qemu_path, "lotus-system-" + arch)
     else:
         # Default is to use system path for qemu.
-        qemu_path = "qemu-system-" + arch
+        qemu_path = "lotus-system-" + arch
     return qemu_path
 
 def get_qemu_version(qemu_path):

@@ -88,7 +88,7 @@ typedef struct QCryptoTLSCredsX509Class QCryptoTLSCredsX509Class;
  * <example>
  *   <title>Creating x509 TLS credential objects via CLI</title>
  *   <programlisting>
- *  qemu-system-x86_64 -object tls-creds-x509,id=tlscreds0,\
+ *  lotus-system-x86_64 -object tls-creds-x509,id=tlscreds0,\
  *          endpoint=server,verify-peer=off,\
  *          dir=/path/to/x509/certdir/
  *   </programlisting>

@@ -4,7 +4,7 @@ s390x System emulator
 ---------------------
 
 QEMU can emulate z/Architecture (in particular, 64 bit) s390x systems
-via the ``qemu-system-s390x`` binary. Only one machine type,
+via the ``lotus-system-s390x`` binary. Only one machine type,
 ``s390-ccw-virtio``, is supported (with versioning for compatibility
 handling).
 

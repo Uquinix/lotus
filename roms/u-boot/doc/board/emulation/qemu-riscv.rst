@@ -40,11 +40,11 @@ The minimal QEMU command line to get U-Boot up and running is:
 
 - For 32-bit RISC-V::
 
-    qemu-system-riscv32 -nographic -machine virt -bios u-boot
+    lotus-system-riscv32 -nographic -machine virt -bios u-boot
 
 - For 64-bit RISC-V::
 
-    qemu-system-riscv64 -nographic -machine virt -bios u-boot
+    lotus-system-riscv64 -nographic -machine virt -bios u-boot
 
 The commands above create targets with 128MiB memory by default.
 A freely configurable amount of RAM can be created via the '-m'
@@ -98,12 +98,12 @@ configurations are:
 
 - For 32-bit RISC-V::
 
-    qemu-system-riscv32 -nographic -machine virt -bios spl/u-boot-spl \
+    lotus-system-riscv32 -nographic -machine virt -bios spl/u-boot-spl \
     -device loader,file=u-boot.itb,addr=0x80200000
 
 - For 64-bit RISC-V::
 
-    qemu-system-riscv64 -nographic -machine virt -bios spl/u-boot-spl \
+    lotus-system-riscv64 -nographic -machine virt -bios spl/u-boot-spl \
     -device loader,file=u-boot.itb,addr=0x80200000
 
 An attached disk can be emulated by adding::

@@ -1,6 +1,6 @@
 /*
  * qdev property parsing
- * (parts specific for qemu-system-*)
+ * (parts specific for lotus-system-*)
  *
  * This file is based on code from hw/qdev-properties.c from
  * commit 074a86fccd185616469dfcdc0e157f438aebba18,

@@ -57,7 +57,7 @@ Then we can run the UART example using:
 
 .. code-block:: bash
 
-   $ qemu-system-riscv64 -M shakti_c -nographic \
+   $ lotus-system-riscv64 -M shakti_c -nographic \
       -bios path/to/shakti_sdk_qemu/loopback.shakti
 
 OpenSBI
@@ -78,5 +78,5 @@ Boot it using the below qemu command.
 
 .. code-block:: bash
 
-   $ qemu-system-riscv64 -M shakti_c -nographic \
+   $ lotus-system-riscv64 -M shakti_c -nographic \
       -bios path/to/fw_payload.elf

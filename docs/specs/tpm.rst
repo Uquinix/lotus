@@ -242,7 +242,7 @@ hardware TPM ``/dev/tpm0``:
 
 .. code-block:: console
 
-  qemu-system-x86_64 -display sdl -accel kvm \
+  lotus-system-x86_64 -display sdl -accel kvm \
   -m 1024 -boot d -bios bios-256k.bin -boot menu=on \
   -tpmdev passthrough,id=tpm0,path=/dev/tpm0 \
   -device tpm-tis,tpmdev=tpm0 test.img
@@ -311,7 +311,7 @@ with the swtpm (x86):
 
 .. code-block:: console
 
-  qemu-system-x86_64 -display sdl -accel kvm \
+  lotus-system-x86_64 -display sdl -accel kvm \
     -m 1024 -boot d -bios bios-256k.bin -boot menu=on \
     -chardev socket,id=chrtpm,path=/tmp/mytpm1/swtpm-sock \
     -tpmdev emulator,id=tpm0,chardev=chrtpm \
@@ -321,7 +321,7 @@ In case a pSeries machine is emulated, use the following command line:
 
 .. code-block:: console
 
-  qemu-system-ppc64 -display sdl -machine pseries,accel=kvm \
+  lotus-system-ppc64 -display sdl -machine pseries,accel=kvm \
     -m 1024 -bios slof.bin -boot menu=on \
     -nodefaults -device VGA -device pci-ohci -device usb-kbd \
     -chardev socket,id=chrtpm,path=/tmp/mytpm1/swtpm-sock \
@@ -335,7 +335,7 @@ In case an Arm virt machine is emulated, use the following command line:
 
 .. code-block:: console
 
-  qemu-system-aarch64 -machine virt,gic-version=3,accel=kvm \
+  lotus-system-aarch64 -machine virt,gic-version=3,accel=kvm \
     -cpu host -m 4G \
     -nographic -no-acpi \
     -chardev socket,id=chrtpm,path=/tmp/mytpm1/swtpm-sock \
@@ -404,7 +404,7 @@ In a 2nd terminal start the VM:
 
 .. code-block:: console
 
-  qemu-system-x86_64 -display sdl -accel kvm \
+  lotus-system-x86_64 -display sdl -accel kvm \
     -m 1024 -boot d -bios bios-256k.bin -boot menu=on \
     -chardev socket,id=chrtpm,path=/tmp/mytpm1/swtpm-sock \
     -tpmdev emulator,id=tpm0,chardev=chrtpm \
@@ -444,7 +444,7 @@ In the 2nd terminal restore the state of the VM using the additional
 
 .. code-block:: console
 
-  qemu-system-x86_64 -display sdl -accel kvm \
+  lotus-system-x86_64 -display sdl -accel kvm \
     -m 1024 -boot d -bios bios-256k.bin -boot menu=on \
     -chardev socket,id=chrtpm,path=/tmp/mytpm1/swtpm-sock \
     -tpmdev emulator,id=tpm0,chardev=chrtpm \

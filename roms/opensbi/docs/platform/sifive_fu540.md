@@ -178,12 +178,12 @@ The above errors can be safely ignored as we don't run U-Boot SPL under QEMU.
 
 Run:
 ```
-qemu-system-riscv64 -M sifive_u -m 256M -nographic \
+lotus-system-riscv64 -M sifive_u -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_payload.bin
 ```
 or
 ```
-qemu-system-riscv64 -M sifive_u -m 256M -nographic \
+lotus-system-riscv64 -M sifive_u -m 256M -nographic \
 	-bios build/platform/generic/firmware/fw_jump.bin \
 	-kernel <uboot_build_dir>/u-boot.bin
 ```

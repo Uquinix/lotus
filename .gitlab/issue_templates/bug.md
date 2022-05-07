@@ -21,8 +21,8 @@ https://www.qemu.org/contribute/security-process/
  - Operating system: (Windows 10 21H1, Fedora 34, etc.)
  - OS/kernel version: (For POSIX hosts, use `uname -a`)
  - Architecture: (x86, ARM, s390x, etc.)
- - QEMU flavor: (qemu-system-x86_64, qemu-aarch64, qemu-img, etc.)
- - QEMU version: (e.g. `qemu-system-x86_64 --version`)
+ - QEMU flavor: (lotus-system-x86_64, qemu-aarch64, qemu-img, etc.)
+ - QEMU version: (e.g. `lotus-system-x86_64 --version`)
  - QEMU command line:
    <!--
    Give the smallest, complete command line that exhibits the problem.
@@ -31,7 +31,7 @@ https://www.qemu.org/contribute/security-process/
    command line arguments in /var/log/libvirt/qemu/$GUEST.log.
    -->
    ```
-   ./qemu-system-x86_64 -M q35 -m 4096 -enable-kvm -hda fedora32.qcow2
+   ./lotus-system-x86_64 -M q35 -m 4096 -enable-kvm -hda fedora32.qcow2
    ```
 
 ## Emulated/Virtualized environment

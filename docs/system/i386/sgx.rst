@@ -87,7 +87,7 @@ restriction of MISCSELECT, ATTRIBUTES and XFRM requires intercepting ECREATE,
 i.e. may marginally reduce SGX performance in the guest. All SGX sub-features
 controlled via -cpu are prefixed with "sgx", e.g.::
 
-  $ qemu-system-x86_64 -cpu help | xargs printf "%s\n" | grep sgx
+  $ lotus-system-x86_64 -cpu help | xargs printf "%s\n" | grep sgx
   sgx
   sgx-debug
   sgx-encls-c

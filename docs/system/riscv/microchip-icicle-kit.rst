@@ -86,7 +86,7 @@ Then we can boot the machine by:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M microchip-icicle-kit -smp 5 \
+  $ lotus-system-riscv64 -M microchip-icicle-kit -smp 5 \
       -bios path/to/hss.bin -sd path/to/sdcard.img \
       -nic user,model=cadence_gem \
       -nic tap,ifname=tap,model=cadence_gem,script=no \
@@ -128,7 +128,7 @@ Then we can boot the machine by:
 
 .. code-block:: bash
 
-  $ qemu-system-riscv64 -M microchip-icicle-kit -smp 5 -m 2G \
+  $ lotus-system-riscv64 -M microchip-icicle-kit -smp 5 -m 2G \
       -sd path/to/sdcard.img \
       -nic user,model=cadence_gem \
       -nic tap,ifname=tap,model=cadence_gem,script=no \

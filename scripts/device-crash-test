@@ -382,7 +382,7 @@ def binariesToTest(args, testcase):
         r = args.qemu
     else:
         r = [f.path for f in os.scandir('.')
-             if f.name.startswith('qemu-system-') and
+             if f.name.startswith('lotus-system-') and
                 f.is_file() and os.access(f, os.X_OK)]
     return r
 

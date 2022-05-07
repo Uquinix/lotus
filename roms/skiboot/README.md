@@ -120,7 +120,7 @@ Also see external/mambo/README.md
 Qemu as of version 2.8 implements the 'powernv' machine model and is sufficient
 to run skiboot:
 
- qemu-system-ppc64 -M powernv -m 3G -nographic -L /path/to/skiboot/
+ lotus-system-ppc64 -M powernv -m 3G -nographic -L /path/to/skiboot/
 
 To run a boot-to-bootloader test you need a Linux kernel image 'zImage.epapr'.
 Build one using the `opal_defconfig` config for op-build. See
@@ -131,7 +131,7 @@ Drop zImage.epapr in the skiboot directory and the skiboot test suite will
 automatically pick it up. You can also run a combined skiboot and Linux test in
 Qemu (version 3.0+):
 
- qemu-system-ppc64 -M powernv -m 3G -nographic -kernel zImage.epapr -L /path/to/skiboot/
+ lotus-system-ppc64 -M powernv -m 3G -nographic -kernel zImage.epapr -L /path/to/skiboot/
 
 See opal-ci/README for further testing instructions.
 

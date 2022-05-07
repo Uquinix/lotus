@@ -417,10 +417,10 @@ to install/boot a Windows XP OS (below for example command to install Windows).
    $ qemu-img create -f qcow2 disk.img 10G
 
    # Install a Windows XP OS from an ISO image 'winxp.iso'
-   $ qemu-system-i386 -serial stdio -bios u-boot.rom -hda disk.img -cdrom winxp.iso -smp 2 -m 512
+   $ lotus-system-i386 -serial stdio -bios u-boot.rom -hda disk.img -cdrom winxp.iso -smp 2 -m 512
 
    # Boot a Windows XP OS installed on the virutal hard disk
-   $ qemu-system-i386 -serial stdio -bios u-boot.rom -hda disk.img -smp 2 -m 512
+   $ lotus-system-i386 -serial stdio -bios u-boot.rom -hda disk.img -smp 2 -m 512
 
 This is also tested on Intel Crown Bay board with a PCIe graphics card, booting
 SeaBIOS then chain-loading a GRUB on a USB drive, then Linux kernel finally.

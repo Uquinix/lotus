@@ -4,8 +4,8 @@ RISC-V System emulator
 ======================
 
 QEMU can emulate both 32-bit and 64-bit RISC-V CPUs. Use the
-``qemu-system-riscv64`` executable to simulate a 64-bit RISC-V machine,
-``qemu-system-riscv32`` executable to simulate a 32-bit RISC-V machine.
+``lotus-system-riscv64`` executable to simulate a 64-bit RISC-V machine,
+``lotus-system-riscv32`` executable to simulate a 32-bit RISC-V machine.
 
 QEMU has generally good support for RISC-V guests. It has support for
 several different machines. The reason we support so many is that
@@ -55,8 +55,8 @@ Board-specific documentation
 
 Unfortunately many of the RISC-V boards QEMU supports are currently
 undocumented; you can get a complete list by running
-``qemu-system-riscv64 --machine help``, or
-``qemu-system-riscv32 --machine help``.
+``lotus-system-riscv64 --machine help``, or
+``lotus-system-riscv32 --machine help``.
 
 ..
    This table of contents should be kept sorted alphabetically
